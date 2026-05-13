@@ -2,7 +2,7 @@
 :root {
   --primary: #1e40af;
   --primary-dark: #1e3a8a;
-  --primary-light: #3b82f6;
+  --primary-light: #00b7ff;
   --accent: #0f172a;
   --accent-dark: #000000;
   --whatsapp: #25D366;
@@ -229,11 +229,31 @@ ul { list-style: none; }
   z-index: 0;
 }
 
+.hero-image {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
+}
+
 .hero-image::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.94) 0%, rgba(15, 23, 42, 0.88) 100%);
+  top: -30%;
+  right: -15%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 183, 255, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(30, 64, 175, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
   z-index: 1;
 }
 
