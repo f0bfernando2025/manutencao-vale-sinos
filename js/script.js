@@ -71,13 +71,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.service-card, .diff-card, .value-card, .section-header, .category-header, .subcategory, .contact-item, .benefit-item').forEach(el => {
+document.querySelectorAll('.service-card, .diff-card, .value-card, .section-header, .category-header, .subcategory, .contact-item, .benefit-item, .process-step, .trust-item').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
 
 // ========== Form Submission to WhatsApp ==========
-const WHATSAPP_NUMBER = '555181273443';
+const WHATSAPP_NUMBER = '5551999299247';
 
 function handleFormSubmit(formId, intro) {
   const form = document.getElementById(formId);
@@ -108,5 +108,5 @@ function handleFormSubmit(formId, intro) {
   });
 }
 
-handleFormSubmit('contact-form', 'Olá! Entrei em contato pelo site:');
-handleFormSubmit('orcamento-form', 'Olá! Gostaria de um orçamento:');
+handleFormSubmit('contact-form', 'Olá Diego! Entrei em contato pelo site:');
+handleFormSubmit('orcamento-form', 'Olá Diego! Gostaria de um orçamento:');

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56">
+  <defs>
+    <linearGradient id="dmb-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="56" height="56" rx="13" fill="url(#dmb-bg)"/>
+  <text x="28" y="36" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif" font-weight="900" font-size="20" fill="#ffffff" letter-spacing="-1">DMB</text>
+</svg>
