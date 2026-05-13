@@ -108,5 +108,5 @@ function handleFormSubmit(formId, intro) {
   });
 }
 
-handleFormSubmit('contact-form', 'Olá Diego! Entrei em contato pelo site:');
-handleFormSubmit('orcamento-form', 'Olá Diego! Gostaria de um orçamento:');
+handleFormSubmit('contact-form', 'Olá! Entrei em contato pelo site:');
+handleFormSubmit('orcamento-form', 'Olá! Gostaria de um orçamento:');
