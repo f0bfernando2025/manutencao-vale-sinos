@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicite seu orçamento rápido para serviços de manutenção no Vale dos Sinos. Retorno em minutos.">
+  <title>Orçamento Rápido | Manutenção Vale dos Sinos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <span>Manutenção Vale</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="trabalhos.html">Trabalhos</a>
+        <a href="avaliacoes.html">Avaliações</a>
+        <a href="contato.html">Contato</a>
+        <a href="orcamento.html" class="active">Orçamento</a>
+        <a href="https://wa.me/555181273443" class="nav-cta" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a>
+        <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; opacity: 0.6;"></i>
+        <span>Orçamento</span>
+      </div>
+      <h1>Orçamento Rápido</h1>
+      <p>Envie seu pedido e receba retorno rápido. Sem compromisso!</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="orcamento-grid">
+
+        <div class="orcamento-info">
+          <h2>Por que pedir um orçamento conosco?</h2>
+          <p class="lead">Serviço profissional com preço justo. Atendimento direto, sem intermediários.</p>
+
+          <div class="orcamento-benefits">
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <h4>Retorno rápido</h4>
+                <p>Respondemos em minutos pelo WhatsApp.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fa-solid fa-tags"></i></div>
+              <div>
+                <h4>Sem compromisso</h4>
+                <p>Você decide se vai contratar depois.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <h4>Preço transparente</h4>
+                <p>Tudo claro desde o início, sem surpresas.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Atendemos hoje</h4>
+                <p>Sempre que possível, atendemos no mesmo dia.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/555181273443?text=Olá!%20Gostaria%20de%20um%20orçamento." class="btn btn-whatsapp" target="_blank" style="margin-top: 28px;">
+            <i class="fa-brands fa-whatsapp"></i> Prefiro chamar direto no WhatsApp
+          </a>
+        </div>
+
+        <div class="form-card">
+          <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">Solicite seu orçamento</h2>
+          <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">Preencha o formulário e receba retorno pelo WhatsApp em minutos.</p>
+
+          <form id="orcamento-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(51) 99999-9999" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="servico">Serviço</label>
+              <select id="servico" name="servico" class="form-select" required>
+                <option value="">Selecione um serviço</option>
+                <option>Elétrica</option>
+                <option>Hidráulica</option>
+                <option>Desentupimento</option>
+                <option>Pintura</option>
+                <option>Limpeza de Calha</option>
+                <option>Limpeza de Caixa d'Água</option>
+                <option>Outros serviços</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mensagem">Detalhes do serviço</label>
+              <textarea id="mensagem" name="mensagem" class="form-textarea" placeholder="Descreva brevemente o que você precisa, prazo, local etc..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <i class="fa-brands fa-whatsapp"></i> Enviar pedido pelo WhatsApp
+            </button>
+            <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 14px;">
+              <i class="fa-solid fa-lock" style="color: var(--accent);"></i> Seus dados são enviados direto para nosso WhatsApp
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Manutenção Vale</span>
+          </a>
+          <p>Soluções completas em manutenção residencial e comercial. Atendemos todo o Vale dos Sinos com qualidade, rapidez e garantia.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="trabalhos.html">Trabalhos</a></li>
+            <li><a href="avaliacoes.html">Avaliações</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="orcamento.html">Orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="servicos.html#eletrica">Elétrica</a></li>
+            <li><a href="servicos.html#hidraulica">Hidráulica</a></li>
+            <li><a href="servicos.html#desentupimento">Desentupimento</a></li>
+            <li><a href="servicos.html#pintura">Pintura</a></li>
+            <li><a href="servicos.html#calha">Limpeza de Calha</a></li>
+            <li><a href="servicos.html#caixa-agua">Caixa d'Água</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-brands fa-whatsapp"></i> (51) 8127-3443</li>
+            <li><i class="fa-solid fa-location-dot"></i> Vale dos Sinos, RS</li>
+            <li><i class="fa-solid fa-clock"></i> Atendimento 24h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Manutenção Vale. Todos os direitos reservados.</span>
+        <div class="payment-methods">
+          <span>Aceitamos:</span>
+          <i class="fa-brands fa-pix"></i>
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-amex"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/555181273443" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
