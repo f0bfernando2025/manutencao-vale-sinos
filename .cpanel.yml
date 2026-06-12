@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/dieg8502/public_html
+    - /bin/cp -R index.html servicos.html sobre.html trabalhos.html avaliacoes.html contato.html orcamento.html css js images $DEPLOYPATH/
