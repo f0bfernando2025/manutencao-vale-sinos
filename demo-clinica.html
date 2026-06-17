@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Clínica Vida Plena — Saúde com cuidado humano</title>
+<meta name="description" content="Clínica médica multidisciplinar. Agende sua consulta com praticidade e seja atendido por uma equipe que cuida de você de verdade."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10283A;--teal:#0EA5A4;--teal-d:#0B7E7D;--mint:#E8F7F6;--soft:#F4FAFA;--sky:#DBEEF7;--paper:#fff;--muted:#5C7384;--line:#E1ECF0;--r:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3{line-height:1.1;letter-spacing:-.02em;font-weight:800}
+.demo-badge{background:var(--ink);color:#fff;text-align:center;font-size:.78rem;letter-spacing:.05em;padding:7px;font-weight:600}
+.demo-badge b{color:#7FE3E0}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.2rem}
+.brand .logo{width:38px;height:38px;border-radius:12px;background:var(--teal);display:grid;place-items:center;color:#fff}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-weight:500;color:var(--muted);font-size:.95rem}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;padding:.8rem 1.5rem;border-radius:999px;cursor:pointer;border:none;transition:.2s;font-size:.95rem}
+.btn-p{background:var(--teal);color:#fff;box-shadow:0 10px 24px -10px rgba(14,165,164,.7)}
+.btn-p:hover{background:var(--teal-d);transform:translateY(-2px)}
+.btn-o{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn-o:hover{border-color:var(--teal)}
+.hero{background:linear-gradient(160deg,var(--soft),var(--sky));padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.tag{display:inline-block;background:#fff;color:var(--teal-d);font-weight:600;font-size:.82rem;padding:.4rem 1rem;border-radius:999px;margin-bottom:1.2rem;box-shadow:0 4px 14px -8px rgba(16,40,58,.3)}
+.hero h1{font-size:clamp(2.3rem,5vw,3.5rem);margin-bottom:1.2rem}
+.hero h1 span{color:var(--teal-d)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:30em;margin-bottom:2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:flex;gap:2.4rem;margin-top:2.6rem}
+.hero-stats b{font-size:1.7rem;color:var(--teal-d);display:block;line-height:1}
+.hero-stats span{font-size:.85rem;color:var(--muted)}
+.hero-img{position:relative}
+.hero-img .photo{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(150deg,#A7DAD7,#0EA5A4);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(11,126,125,.6)}
+.hero-img .photo svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-img .float{position:absolute;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px -20px rgba(16,40,58,.4);display:flex;align-items:center;gap:.7rem}
+.hero-img .f1{top:24px;left:-22px}
+.hero-img .f2{bottom:30px;right:-16px}
+.hero-img .dotg{width:34px;height:34px;border-radius:50%;background:var(--mint);display:grid;place-items:center;color:var(--teal)}
+.hero-img .float b{font-size:.92rem}.hero-img .float span{font-size:.76rem;color:var(--muted)}
+section{padding:84px 0}
+.sh{text-align:center;max-width:40rem;margin:0 auto 54px}
+.sh .ey{color:var(--teal);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
+.sh h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin:.7rem 0 .8rem}
+.sh p{color:var(--muted)}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.spec{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;transition:.25s}
+.spec:hover{transform:translateY(-6px);box-shadow:0 26px 48px -28px rgba(16,40,58,.35);border-color:transparent}
+.spec .ic{width:54px;height:54px;border-radius:15px;background:var(--mint);color:var(--teal-d);display:grid;place-items:center;margin-bottom:16px}
+.spec h3{font-size:1.2rem;margin-bottom:.5rem}
+.spec p{color:var(--muted);font-size:.94rem}
+.band{background:var(--soft)}
+.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.why .photo2{aspect-ratio:1/1;border-radius:26px;overflow:hidden;background:linear-gradient(150deg,#CDEBE9,#0EA5A4);box-shadow:0 30px 60px -34px rgba(11,126,125,.55)}
+.why .photo2 svg{width:100%;height:100%;display:block}
+.why h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:1rem}
+.why ul{list-style:none;margin-top:1.4rem;display:flex;flex-direction:column;gap:1rem}
+.why li{display:flex;gap:.9rem;align-items:flex-start}
+.why li .ck{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:.85rem;margin-top:2px}
+.why li b{display:block}.why li span{color:var(--muted);font-size:.93rem}
+.cta-band{background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;border-radius:30px;padding:60px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.12);top:-120px;right:-80px}
+.cta-band h2{font-size:clamp(1.9rem,3.6vw,2.7rem);position:relative;margin-bottom:.8rem}
+.cta-band p{position:relative;opacity:.92;margin-bottom:2rem;font-size:1.1rem}
+.cta-band .btn-w{background:#fff;color:var(--teal-d)}
+.cta-band .btn-w:hover{transform:translateY(-2px)}
+footer{background:var(--ink);color:#cfe0e8;padding:54px 0 30px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot .brand{color:#fff;margin-bottom:.8rem}
+.foot p{font-size:.9rem;max-width:22rem;opacity:.8}
+.foot-c h5{color:#fff;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem}
+.foot-c a,.foot-c p{display:block;font-size:.92rem;margin-bottom:.5rem;opacity:.8}
+.copy{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:.84rem;opacity:.7;text-align:center}
+@media(max-width:880px){.hero-grid,.why{grid-template-columns:1fr;gap:48px}.specs{grid-template-columns:1fr}.nav-links{display:none}}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.why .photo2{position:relative}
+</style>
+</head>
+<body>
+<div class="demo-badge">PROJETO DEMONSTRATIVO — criado por <b>Mateus Olmi Digital</b> · seu site pode ser assim</div>
+<header><div class="wrap nav">
+  <div class="brand"><span class="logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></span>Vida Plena</div>
+  <nav class="nav-links"><a href="#especialidades">Especialidades</a><a href="#sobre">A Clínica</a><a href="#contato">Contato</a><a href="#contato" class="btn btn-p">Agendar consulta</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="tag">● Atendimento humanizado</span>
+    <h1>Cuidar de você é o nosso <span>maior compromisso</span></h1>
+    <p>Clínica médica multidisciplinar com equipe acolhedora, estrutura moderna e agendamento descomplicado. Sua saúde em boas mãos.</p>
+    <div class="hero-cta"><a href="#contato" class="btn btn-p">Agendar consulta</a><a href="#especialidades" class="btn btn-o">Ver especialidades</a></div>
+    <div class="hero-stats"><div><b>15+</b><span>especialidades</span></div><div><b>20 anos</b><span>de experiência</span></div><div><b>4.9★</b><span>avaliação dos pacientes</span></div></div>
+  </div>
+  <div class="hero-img">
+    <div class="photo"><img class="ph-img" loading="lazy" alt="Atendimento médico humanizado" src="https://loremflickr.com/600/750/doctor,clinic?lock=31"><svg viewBox="0 0 400 500" fill="none" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="500" fill="url(#cg)"/>
+      <defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BCE6E3"/><stop offset="1" stop-color="#0EA5A4"/></linearGradient></defs>
+      <circle cx="200" cy="150" r="62" fill="#fff" opacity=".95"/>
+      <circle cx="200" cy="135" r="30" fill="#0B7E7D" opacity=".5"/>
+      <path d="M120 380c0-50 35-86 80-86s80 36 80 86z" fill="#fff" opacity=".95"/>
+      <rect x="170" y="300" width="60" height="46" rx="8" fill="#E8F7F6"/>
+      <g stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".9" fill="none"><path d="M40 250h40l18-44 26 90 20-58 14 28h132"/></g>
+      <g opacity=".9"><circle cx="318" cy="118" r="34" fill="#fff"/><path d="M318 100v36M300 118h36" stroke="#0EA5A4" stroke-width="8" stroke-linecap="round"/></g>
+    </svg></div>
+    <div class="float f1"><span class="dotg"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></span><div><b>Cuidado real</b><span>com quem importa</span></div></div>
+    <div class="float f2"><span class="dotg">✓</span><div><b>Consulta confirmada</b><span>em poucos cliques</span></div></div>
+  </div>
+</div></section>
+
+<section id="especialidades"><div class="wrap">
+  <div class="sh"><span class="ey">Especialidades</span><h2>Tudo o que sua família precisa em um só lugar</h2><p>Profissionais de diversas áreas para cuidar de cada fase da sua vida.</p></div>
+  <div class="specs">
+    <div class="spec"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 6 4-12 2 6h6"/></svg></div><h3>Clínica Geral</h3><p>Avaliação completa, prevenção e acompanhamento contínuo da sua saúde.</p></div>
+    <div class="spec"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></div><h3>Cardiologia</h3><p>Diagnóstico e cuidado especializado para a saúde do seu coração.</p></div>
+    <div class="spec"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/></svg></div><h3>Oftalmologia</h3><p>Exames de vista e tratamentos com equipamentos de última geração.</p></div>
+    <div class="spec"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div><h3>Dermatologia</h3><p>Saúde e estética da pele com diagnóstico preciso e cuidadoso.</p></div>
+    <div class="spec"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div><h3>Pediatria</h3><p>Acompanhamento do crescimento e da saúde dos pequenos com carinho.</p></div>
+    <div class="spec"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div><h3>Exames laboratoriais</h3><p>Coleta no local e resultados rápidos com total segurança.</p></div>
+  </div>
+</div></section>
+
+<section id="sobre" class="band"><div class="wrap why">
+  <div class="photo2"><img class="ph-img" loading="lazy" alt="Estrutura moderna da clínica" src="https://loremflickr.com/700/700/hospital,clinic?lock=32"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="url(#cg2)"/><defs><linearGradient id="cg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D6F0EE"/><stop offset="1" stop-color="#0EA5A4"/></linearGradient></defs><g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".95"><circle cx="150" cy="120" r="26"/><path d="M150 146v70c0 40 34 70 74 70s74-30 74-70v-30"/><circle cx="298" cy="200" r="22" fill="#fff"/></g><g opacity=".85"><rect x="60" y="250" width="120" height="80" rx="14" fill="#fff"/><path d="M120 268v44M98 290h44" stroke="#0EA5A4" stroke-width="12" stroke-linecap="round"/></g></svg></div>
+  <div>
+    <span class="ey" style="color:var(--teal);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem">A Clínica</span>
+    <h2>Estrutura moderna, atendimento de gente para gente</h2>
+    <p style="color:var(--muted)">Há mais de duas décadas cuidando da saúde da comunidade, unimos tecnologia e acolhimento para que cada paciente se sinta seguro e bem cuidado.</p>
+    <ul>
+      <li><span class="ck">✓</span><div><b>Agendamento fácil</b><span>Marque sua consulta pelo WhatsApp ou telefone em minutos.</span></div></li>
+      <li><span class="ck">✓</span><div><b>Equipe acolhedora</b><span>Profissionais que ouvem você e explicam tudo com clareza.</span></div></li>
+      <li><span class="ck">✓</span><div><b>Ambiente confortável</b><span>Espaço limpo, tranquilo e pensado para o seu bem-estar.</span></div></li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="contato"><div class="wrap"><div class="cta-band">
+  <h2>Pronto para cuidar da sua saúde?</h2>
+  <p>Agende sua consulta agora mesmo. É rápido, simples e sem complicação.</p>
+  <a href="#" class="btn btn-w">Agendar pelo WhatsApp</a>
+</div></div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="brand"><span class="logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></span>Vida Plena</div><p>Clínica médica multidisciplinar dedicada ao cuidado humano e à saúde da sua família.</p></div>
+    <div class="foot-c"><h5>Contato</h5><p>📞 (00) 0000-0000</p><p>📍 Rua Exemplo, 123 — Centro</p><p>🕐 Seg a Sex, 8h às 19h</p></div>
+    <div class="foot-c"><h5>Navegação</h5><a href="#especialidades">Especialidades</a><a href="#sobre">A Clínica</a><a href="#contato">Agendar</a></div>
+  </div>
+  <div class="copy">© Clínica Vida Plena — site demonstrativo desenvolvido por Mateus Olmi Digital</div>
+</div></footer>
+<script>document.querySelectorAll('img.ph-img').forEach(i=>i.addEventListener('error',()=>i.style.display='none'));</script>
+</body>
+</html>
