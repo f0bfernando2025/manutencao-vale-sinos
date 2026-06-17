@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Trattoria Fornello — Cozinha italiana de verdade</title>
+<meta name="description" content="Massas frescas, pizzas na lenha e o sabor autêntico da Itália. Reserve sua mesa e viva uma experiência gastronômica memorável."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--espresso:#231811;--espresso-2:#2E2018;--cream:#F4E9D8;--cream-2:#EADCC4;--tomato:#C5452E;--tomato-d:#A8371F;--olive:#7A7A45;--gold:#D9A441;--muted:#9C8B78;--line:#3A2A1F;--paper:#1C130D}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--cream);background:var(--espresso);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Marcellus',serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+.demo-badge{background:var(--tomato);color:#fff;text-align:center;font-size:.76rem;letter-spacing:.1em;padding:8px;text-transform:uppercase}
+header{position:sticky;top:0;z-index:40;background:rgba(35,24,17,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+.brand{font-family:'Marcellus';font-size:1.5rem;letter-spacing:.04em;display:flex;align-items:center;gap:.6rem}
+.brand .ic{color:var(--gold)}
+.brand b{font-weight:400}.brand small{color:var(--gold);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;display:block;margin-top:-4px}
+.nav-links{display:flex;gap:2.2rem;align-items:center}
+.nav-links a{font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.nav-links a:hover{color:var(--cream)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:.85rem 1.8rem;cursor:pointer;border:none;transition:.22s}
+.btn-t{background:var(--tomato);color:#fff}.btn-t:hover{background:var(--tomato-d)}
+.btn-o{background:transparent;border:1px solid var(--gold);color:var(--gold)}.btn-o:hover{background:var(--gold);color:var(--espresso)}
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse at center,var(--espresso-2),var(--espresso) 70%)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(217,164,65,.025) 40px,rgba(217,164,65,.025) 41px)}
+.hero-inner{position:relative;padding:60px 0}
+.hero .ey{color:var(--gold);font-size:.82rem;letter-spacing:.32em;text-transform:uppercase;margin-bottom:1.6rem}
+.hero h1{font-family:'Marcellus';font-size:clamp(2.8rem,7vw,5.4rem);line-height:1.02;margin-bottom:1.4rem;font-weight:400}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{color:#cbb89f;font-size:1.18rem;max-width:32rem;margin:0 auto 2.4rem}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.divider{display:flex;align-items:center;justify-content:center;gap:1rem;margin:0 auto;max-width:300px;color:var(--gold)}
+.divider::before,.divider::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+section{padding:90px 0}
+.sh{text-align:center;max-width:40rem;margin:0 auto 56px}
+.sh .ey{color:var(--gold);font-size:.8rem;letter-spacing:.24em;text-transform:uppercase}
+.sh h2{font-family:'Marcellus';font-size:clamp(2rem,4.4vw,3.2rem);margin:.8rem 0;font-weight:400}
+.sh p{color:var(--muted)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:18px 60px;max-width:920px;margin:0 auto}
+.dish{display:flex;justify-content:space-between;gap:1rem;padding:18px 0;border-bottom:1px dashed var(--line)}
+.dish .info h3{font-family:'Marcellus';font-size:1.22rem;font-weight:400;margin-bottom:.2rem}
+.dish .info p{color:var(--muted);font-size:.88rem;line-height:1.4}
+.dish .pr{font-family:'Marcellus';color:var(--gold);font-size:1.2rem;white-space:nowrap}
+.menu-cat{grid-column:1/-1;text-align:center;margin:30px 0 6px}
+.menu-cat span{font-family:'Marcellus';color:var(--tomato);font-size:1.05rem;letter-spacing:.18em;text-transform:uppercase}
+.band{background:var(--espresso-2)}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story .img{aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:linear-gradient(160deg,#6b4a30,#231811);position:relative;border:1px solid var(--line)}
+.story .img svg{width:100%;height:100%;display:block}
+.story .img::after{content:"";position:absolute;inset:12px;border:1px solid rgba(217,164,65,.3)}
+.story h2{font-family:'Marcellus';font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1.2rem}
+.story p{color:#cbb89f;margin-bottom:1rem}
+.story .sig{font-family:'Marcellus';font-style:italic;color:var(--gold);font-size:1.4rem;margin-top:1.4rem}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center;margin-top:10px}
+.feat .ic{font-size:2rem;margin-bottom:.6rem}
+.feat h3{font-family:'Marcellus';font-weight:400;font-size:1.3rem;margin-bottom:.4rem}
+.feat p{color:var(--muted);font-size:.92rem}
+.cta{text-align:center;position:relative;overflow:hidden;padding:96px 0;background:radial-gradient(ellipse at center,var(--espresso-2),var(--espresso))}
+.cta h2{font-family:'Marcellus';font-size:clamp(2.2rem,5vw,3.6rem);font-weight:400;margin-bottom:1rem}
+.cta p{color:#cbb89f;max-width:32rem;margin:0 auto 2.2rem;font-size:1.1rem}
+.hours{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;margin-top:2.6rem;color:var(--muted);font-size:.92rem}
+.hours b{color:var(--cream);display:block;font-family:'Marcellus';font-size:1rem;letter-spacing:.04em}
+footer{background:var(--paper);color:var(--muted);padding:54px 0 30px;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot .brand{margin-bottom:.8rem}
+.foot p{font-size:.9rem;max-width:22rem}
+.foot-c h5{color:var(--gold);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.9rem}
+.foot-c a,.foot-c p{display:block;font-size:.92rem;margin-bottom:.5rem}
+.copy{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);font-size:.84rem;text-align:center}
+@media(max-width:880px){.menu,.story,.feats{grid-template-columns:1fr}.story{gap:40px}.nav-links{display:none}.menu{gap:6px}}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .hero-bg{z-index:0}
+.hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(35,24,17,.74),rgba(35,24,17,.90))}
+.hero-inner{position:relative;z-index:2}
+.story .img .ph-img{z-index:0}
+</style>
+</head>
+<body>
+<div class="demo-badge">Projeto demonstrativo — criado por Mateus Olmi Digital · seu site pode ser assim</div>
+<header><div class="wrap nav">
+  <div class="brand"><span class="ic">🍝</span><div><b>Fornello</b><small>Trattoria</small></div></div>
+  <nav class="nav-links"><a href="#menu">Cardápio</a><a href="#historia">A Casa</a><a href="#contato">Reservas</a><a href="#contato" class="btn btn-t">Reservar mesa</a></nav>
+</div></header>
+
+<section class="hero"><img class="ph-img hero-bg" loading="lazy" alt="Prato de massa italiana" src="https://loremflickr.com/1600/1000/italian,pasta,restaurant?lock=37"><div class="hero-ov"></div><div class="wrap hero-inner">
+  <div class="ey">Cucina Italiana · desde 1998</div>
+  <h1>O sabor autêntico da <em>Itália</em></h1>
+  <p>Massas frescas feitas à mão, pizzas na lenha e receitas que atravessam gerações. Uma experiência para celebrar à mesa.</p>
+  <div class="hero-cta"><a href="#contato" class="btn btn-t">Reservar mesa</a><a href="#menu" class="btn btn-o">Ver cardápio</a></div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <div class="sh"><div class="ey">Buon appetito</div><h2>Nosso cardápio</h2><p>Ingredientes selecionados e o tempero da tradição em cada prato.</p></div>
+  <div class="menu">
+    <div class="menu-cat"><span>— Antipasti —</span></div>
+    <div class="dish"><div class="info"><h3>Bruschetta al Pomodoro</h3><p>Pão tostado, tomate fresco, manjericão e azeite.</p></div><div class="pr">R$32</div></div>
+    <div class="dish"><div class="info"><h3>Tábua de Frios</h3><p>Seleção de queijos e embutidos italianos.</p></div><div class="pr">R$58</div></div>
+    <div class="menu-cat"><span>— Paste —</span></div>
+    <div class="dish"><div class="info"><h3>Spaghetti Carbonara</h3><p>Receita romana clássica com guanciale e pecorino.</p></div><div class="pr">R$54</div></div>
+    <div class="dish"><div class="info"><h3>Ravioli di Ricotta</h3><p>Massa recheada, manteiga de sálvia e parmesão.</p></div><div class="pr">R$62</div></div>
+    <div class="dish"><div class="info"><h3>Lasagna alla Bolognese</h3><p>Camadas de massa fresca, ragù e bechamel.</p></div><div class="pr">R$58</div></div>
+    <div class="dish"><div class="info"><h3>Gnocchi al Pomodoro</h3><p>Nhoque artesanal com molho de tomate fresco.</p></div><div class="pr">R$50</div></div>
+    <div class="menu-cat"><span>— Pizze & Dolci —</span></div>
+    <div class="dish"><div class="info"><h3>Pizza Margherita</h3><p>Molho de tomate, mozzarella de búfala e manjericão.</p></div><div class="pr">R$48</div></div>
+    <div class="dish"><div class="info"><h3>Tiramisù della Casa</h3><p>O clássico italiano feito na hora.</p></div><div class="pr">R$28</div></div>
+  </div>
+</div></section>
+
+<section id="historia" class="band"><div class="wrap story">
+  <div class="img"><img class="ph-img" loading="lazy" alt="Massa fresca artesanal" src="https://loremflickr.com/620/770/pasta,italian,food?lock=38"><svg viewBox="0 0 360 450" preserveAspectRatio="xMidYMid slice"><rect width="360" height="450" fill="url(#rg)"/><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a5436"/><stop offset="1" stop-color="#231811"/></linearGradient></defs><g><circle cx="180" cy="230" r="120" fill="#F4E9D8" opacity=".95"/><circle cx="180" cy="230" r="92" fill="#EADCC4"/><g stroke="#D9A441" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"><path d="M130 230c0-26 22-44 50-44s50 18 50 44"/><path d="M120 250c20 16 40 22 60 22s40-6 60-22"/><path d="M150 210c8-6 22-6 30 0M180 210c8-6 22-6 30 0"/></g><circle cx="180" cy="232" r="16" fill="#C5452E"/></g><g stroke="#D9A441" stroke-width="5" opacity=".7" fill="none" stroke-linecap="round"><path d="M70 120c0 30 0 30 0 60M70 120c-8 14-8 30 0 40"/><path d="M300 120v90"/><circle cx="300" cy="116" r="12"/></g></svg></div>
+  <div>
+    <div class="ey" style="color:var(--gold);font-size:.8rem;letter-spacing:.24em;text-transform:uppercase">A nossa história</div>
+    <h2>Uma cozinha feita de memória e afeto</h2>
+    <p>O Fornello nasceu do sonho de levar à mesa o sabor da verdadeira cozinha italiana — daquela feita em casa, com tempo, paciência e ingredientes que respeitam a tradição.</p>
+    <p>Cada massa é preparada à mão, cada molho cozido lentamente. Aqui, comer é um convite para desacelerar e celebrar.</p>
+    <div class="sig">— Famiglia Fornello</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="divider">✦</div>
+  <div class="feats" style="margin-top:50px">
+    <div class="feat"><div class="ic">🌾</div><h3>Massas frescas</h3><p>Feitas à mão todos os dias na nossa cozinha.</p></div>
+    <div class="feat"><div class="ic">🔥</div><h3>Forno a lenha</h3><p>Pizzas assadas no ponto certo, do jeito italiano.</p></div>
+    <div class="feat"><div class="ic">🍷</div><h3>Carta de vinhos</h3><p>Rótulos selecionados para harmonizar cada prato.</p></div>
+  </div>
+</div></section>
+
+<section id="contato" class="cta"><div class="wrap">
+  <div class="ey" style="color:var(--gold);font-size:.8rem;letter-spacing:.24em;text-transform:uppercase">Venha nos visitar</div>
+  <h2 style="margin-top:.8rem">Reserve a sua mesa</h2>
+  <p>Para almoços tranquilos, jantares especiais ou celebrações inesquecíveis. Esperamos por você.</p>
+  <a href="#" class="btn btn-t">Reservar pelo WhatsApp</a>
+  <div class="hours">
+    <div><b>Almoço</b>Ter a Dom · 12h às 15h</div>
+    <div><b>Jantar</b>Ter a Sáb · 19h às 23h</div>
+    <div><b>Endereço</b>Rua Exemplo, 321 — Centro</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="brand"><span class="ic">🍝</span><div><b>Fornello</b><small>Trattoria</small></div></div><p>Cozinha italiana autêntica, massas frescas e pizzas na lenha desde 1998.</p></div>
+    <div class="foot-c"><h5>Contato</h5><p>📞 (00) 0000-0000</p><p>📍 Rua Exemplo, 321</p><p>🕐 Ter a Dom</p></div>
+    <div class="foot-c"><h5>Menu</h5><a href="#menu">Cardápio</a><a href="#historia">A Casa</a><a href="#contato">Reservas</a></div>
+  </div>
+  <div class="copy">© Trattoria Fornello — site demonstrativo desenvolvido por Mateus Olmi Digital</div>
+</div></footer>
+<script>document.querySelectorAll('img.ph-img').forEach(i=>i.addEventListener('error',()=>i.style.display='none'));</script>
+</body>
+</html>
