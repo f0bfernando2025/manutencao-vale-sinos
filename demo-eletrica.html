@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Voltz Elétrica — Instalações e serviços elétricos</title>
+<meta name="description" content="Instalações elétricas residenciais, comerciais e industriais. Atendimento de emergência 24h, segurança e trabalho garantido."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0E0E10;--ink:#1A1A1E;--yellow:#FFD400;--yellow-d:#E8C000;--gray:#9A9AA3;--line:#2A2A30;--paper:#fff;--soft:#F5F5F2}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--black);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.head-font{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase;line-height:.95}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.demo-badge{background:var(--yellow);color:var(--black);text-align:center;font-size:.78rem;letter-spacing:.06em;padding:7px;font-weight:700}
+header{position:sticky;top:0;z-index:40;background:var(--black);border-bottom:3px solid var(--yellow)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff}
+.brand .bolt{width:42px;height:42px;background:var(--yellow);display:grid;place-items:center;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);transform:skewX(-8deg)}
+.brand .name{font-family:'Anton';font-size:1.5rem;letter-spacing:.02em;text-transform:uppercase}
+.brand .name span{color:var(--yellow)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:#cfcfd6;font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em}
+.nav-links a:hover{color:var(--yellow)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;padding:.85rem 1.6rem;cursor:pointer;border:none;transition:.18s;text-transform:uppercase;letter-spacing:.04em;font-size:.88rem;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.btn-y{background:var(--yellow);color:var(--black)}
+.btn-y:hover{background:var(--yellow-d);transform:translateY(-2px)}
+.btn-d{background:var(--black);color:#fff}
+.btn-d:hover{transform:translateY(-2px)}
+.btn-o{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;clip-path:none;border-radius:0}
+.btn-o:hover{border-color:var(--yellow);color:var(--yellow)}
+.hero{background:var(--black);color:#fff;position:relative;overflow:hidden;padding:90px 0}
+.hero::before{content:"";position:absolute;top:0;right:0;width:45%;height:100%;background:repeating-linear-gradient(135deg,transparent,transparent 18px,rgba(255,212,0,.06) 18px,rgba(255,212,0,.06) 20px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
+.kick{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,212,0,.12);color:var(--yellow);font-weight:700;font-size:.82rem;padding:.5rem 1rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(3rem,7vw,5rem);margin-bottom:1.2rem}
+.hero h1 .yl{color:var(--yellow)}
+.hero p{color:var(--gray);font-size:1.15rem;max-width:30em;margin-bottom:2.2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.emergency{margin-top:2.6rem;display:inline-flex;align-items:center;gap:1rem;border-left:4px solid var(--yellow);padding-left:1rem}
+.emergency .big{font-family:'Anton';font-size:1.8rem;color:#fff}.emergency span{display:block;font-size:.82rem;color:var(--gray);text-transform:uppercase;letter-spacing:.08em}
+.hero-visual{aspect-ratio:1/1;background:linear-gradient(150deg,#222,#0E0E10);border:2px solid var(--line);display:grid;place-items:center;position:relative}
+.hero-visual .boltbig{font-size:11rem;color:var(--yellow);filter:drop-shadow(0 0 30px rgba(255,212,0,.4))}
+.marquee{background:var(--yellow);color:var(--black);padding:14px 0;overflow:hidden;white-space:nowrap}
+.marquee div{display:inline-block;font-family:'Anton';font-size:1.3rem;text-transform:uppercase;letter-spacing:.04em;animation:scroll 22s linear infinite}
+.marquee span{margin:0 1.6rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section{padding:88px 0}
+.sh{margin-bottom:54px;max-width:42rem}
+.sh .ey{color:var(--yellow-d);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem}
+.sh h2{font-size:clamp(2rem,4.5vw,3.2rem);margin:.6rem 0}
+.sh p{color:#555}
+.servs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:2px solid var(--black)}
+.serv{background:#fff;padding:36px 30px;transition:.2s}
+.serv:hover{background:var(--black);color:#fff}
+.serv:hover p{color:var(--gray)}
+.serv .n{font-family:'Anton';font-size:1.6rem;color:var(--yellow-d);margin-bottom:.6rem}
+.serv:hover .n{color:var(--yellow)}
+.serv h3{font-size:1.25rem;text-transform:uppercase;margin-bottom:.6rem;letter-spacing:.01em}
+.serv p{color:#666;font-size:.94rem}
+.why{background:var(--black);color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.why-item .num{font-family:'Anton';font-size:3rem;color:var(--yellow);line-height:1}
+.why-item b{display:block;margin:.4rem 0 .3rem;text-transform:uppercase;letter-spacing:.03em}
+.why-item span{color:var(--gray);font-size:.9rem}
+.cta{background:var(--yellow);text-align:center;padding:80px 0}
+.cta h2{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:1rem}
+.cta p{font-size:1.15rem;font-weight:500;margin-bottom:2rem;color:#3a3000}
+footer{background:var(--black);color:#9a9aa3;padding:54px 0 30px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot .brand{margin-bottom:1rem}
+.foot p{font-size:.9rem;max-width:22rem}
+.foot-c h5{color:var(--yellow);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.9rem}
+.foot-c a,.foot-c p{display:block;font-size:.92rem;margin-bottom:.5rem}
+.copy{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-size:.84rem;text-align:center}
+@media(max-width:880px){.hero-grid,.why-grid{grid-template-columns:1fr}.servs{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr 1fr;gap:34px}.nav-links{display:none}.hero-visual{display:none}}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-visual::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(14,14,16,.30),rgba(14,14,16,.62))}
+</style>
+</head>
+<body>
+<div class="demo-badge">⚡ PROJETO DEMONSTRATIVO — criado por Mateus Olmi Digital · seu site pode ser assim</div>
+<header><div class="wrap nav">
+  <div class="brand"><span class="bolt"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0E0E10"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span class="name">VOLT<span>Z</span></span></div>
+  <nav class="nav-links"><a href="#servicos">Serviços</a><a href="#numeros">A Empresa</a><a href="#contato">Contato</a><a href="#contato" class="btn btn-y">Orçamento grátis</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="kick">⚡ Atendimento 24 horas</span>
+    <h1 class="head-font">Energia <span class="yl">segura</span> para sua casa e empresa</h1>
+    <p>Instalações, manutenção e reparos elétricos com técnicos qualificados, materiais de qualidade e serviço garantido. Resolvemos com rapidez e segurança.</p>
+    <div class="hero-cta"><a href="#contato" class="btn btn-y">Pedir orçamento</a><a href="#servicos" class="btn btn-o">Ver serviços</a></div>
+    <div class="emergency"><div><span>Emergência elétrica?</span><div class="big">(00) 0 0000-0000</div></div></div>
+  </div>
+  <div class="hero-visual"><img class="ph-img" loading="lazy" alt="Eletricista trabalhando com segurança" src="https://loremflickr.com/700/700/electrician,electrical?lock=33"><svg viewBox="0 0 400 400" width="86%" fill="none">
+  <circle cx="200" cy="200" r="150" stroke="rgba(255,212,0,.18)" stroke-width="2" stroke-dasharray="6 10"/>
+  <circle cx="200" cy="200" r="110" stroke="rgba(255,212,0,.25)" stroke-width="2"/>
+  <path d="M214 70 150 215h54l-14 115 96-160h-58z" fill="#FFD400"/>
+  <g stroke="#FFD400" stroke-width="7" stroke-linecap="round" opacity=".8">
+    <path d="M70 300c20-30 0-60 30-80"/><path d="M330 300c-20-30 0-60-30-80"/>
+  </g>
+  <g fill="#FFD400" opacity=".9"><circle cx="70" cy="300" r="9"/><circle cx="330" cy="300" r="9"/></g>
+  <g opacity=".7"><path d="M300 110l10-14 10 14-10 6z" fill="#FFD400"/><path d="M92 120l8-12 8 12-8 6z" fill="#FFD400"/></g>
+</svg></div>
+</div></section>
+
+<div class="marquee"><div><span>INSTALAÇÕES</span>•<span>QUADROS DE ENERGIA</span>•<span>ILUMINAÇÃO</span>•<span>EMERGÊNCIA 24H</span>•<span>MANUTENÇÃO</span>•<span>INSTALAÇÕES</span>•<span>QUADROS DE ENERGIA</span>•<span>ILUMINAÇÃO</span>•<span>EMERGÊNCIA 24H</span>•<span>MANUTENÇÃO</span>•</div></div>
+
+<section id="servicos"><div class="wrap">
+  <div class="sh"><span class="ey">O que fazemos</span><h2 class="head-font">Serviços elétricos completos</h2><p>Do reparo simples ao projeto completo — tudo dentro das normas e com segurança total.</p></div>
+  <div class="servs">
+    <div class="serv"><div class="n">01</div><h3>Instalações</h3><p>Instalações elétricas residenciais, comerciais e industriais do zero ou em reforma.</p></div>
+    <div class="serv"><div class="n">02</div><h3>Quadros de energia</h3><p>Montagem e modernização de quadros de distribuição com proteção adequada.</p></div>
+    <div class="serv"><div class="n">03</div><h3>Iluminação</h3><p>Projetos de iluminação interna e externa, eficientes e econômicos.</p></div>
+    <div class="serv"><div class="n">04</div><h3>Manutenção</h3><p>Identificação de falhas, troca de componentes e prevenção de problemas.</p></div>
+    <div class="serv"><div class="n">05</div><h3>Emergência 24h</h3><p>Curto-circuito, queda de energia ou risco? Atendemos a qualquer hora.</p></div>
+    <div class="serv"><div class="n">06</div><h3>Laudos e vistorias</h3><p>Avaliação técnica e adequação às normas de segurança elétrica.</p></div>
+  </div>
+</div></section>
+
+<section id="numeros" class="why"><div class="wrap">
+  <div class="sh"><span class="ey" style="color:var(--yellow)">Por que a Voltz</span><h2 class="head-font" style="color:#fff">Trabalho feito direito, da primeira vez</h2></div>
+  <div class="why-grid">
+    <div class="why-item"><div class="num">+12</div><b>Anos no mercado</b><span>Experiência que você confia</span></div>
+    <div class="why-item"><div class="num">24h</div><b>Atendimento</b><span>Emergência todos os dias</span></div>
+    <div class="why-item"><div class="num">100%</div><b>Dentro da norma</b><span>Segurança garantida</span></div>
+    <div class="why-item"><div class="num">+800</div><b>Serviços feitos</b><span>Clientes satisfeitos</span></div>
+  </div>
+</div></section>
+
+<section id="contato" class="cta"><div class="wrap">
+  <h2 class="head-font">Precisa de um eletricista de confiança?</h2>
+  <p>Solicite seu orçamento agora. Resposta rápida e sem compromisso.</p>
+  <a href="#" class="btn btn-d">Chamar no WhatsApp</a>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="brand"><span class="bolt"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0E0E10"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span class="name" style="color:#fff">VOLT<span style="color:var(--yellow)">Z</span></span></div><p>Instalações e serviços elétricos com segurança, qualidade e atendimento de emergência 24 horas.</p></div>
+    <div class="foot-c"><h5>Contato</h5><p>📞 (00) 0 0000-0000</p><p>📍 Atendemos toda a região</p><p>⚡ Emergência 24h</p></div>
+    <div class="foot-c"><h5>Serviços</h5><a href="#servicos">Instalações</a><a href="#servicos">Manutenção</a><a href="#servicos">Emergência</a></div>
+  </div>
+  <div class="copy">© Voltz Elétrica — site demonstrativo desenvolvido por Mateus Olmi Digital</div>
+</div></footer>
+<script>document.querySelectorAll('img.ph-img').forEach(i=>i.addEventListener('error',()=>i.style.display='none'));</script>
+</body>
+</html>
