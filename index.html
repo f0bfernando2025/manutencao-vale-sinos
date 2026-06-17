@@ -1,406 +1,524 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DMB Serviços - Soluções completas em elétrica, hidráulica e manutenção no Vale dos Sinos. WhatsApp: (51) 99929-9247.">
-  <title>DMB Serviços | Elétrica, Hidráulica e Manutenção no Vale dos Sinos</title>
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mateus Olmi Digital — Sites profissionais e lojas virtuais</title>
+<meta name="description" content="Criação de sites profissionais, lojas virtuais e SEO para empresas do Brasil, Europa e EUA. Sites modernos, rápidos e preparados para gerar clientes." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07070D;
+  --bg-2:#0D0D18;
+  --surface:rgba(255,255,255,.045);
+  --surface-2:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.10);
+  --border-str:rgba(255,255,255,.18);
+  --text:#EDECF7;
+  --muted:#9695B0;
+  --violet:#A855F7;
+  --indigo:#6366F1;
+  --cyan:#22D3EE;
+  --wa:#25D366;
+  --grad:linear-gradient(120deg,#A855F7 0%,#6366F1 48%,#22D3EE 100%);
+  --grad-soft:linear-gradient(120deg,rgba(168,85,247,.16),rgba(99,102,241,.14),rgba(34,211,238,.12));
+  --r:20px;
+  --maxw:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--bg);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
+}
+/* aurora background */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(60% 50% at 15% 0%, rgba(168,85,247,.22), transparent 60%),
+    radial-gradient(55% 45% at 90% 10%, rgba(34,211,238,.16), transparent 60%),
+    radial-gradient(50% 50% at 60% 100%, rgba(99,102,241,.18), transparent 60%),
+    var(--bg);
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:3px 3px;
+}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.06;letter-spacing:-.025em;font-weight:800}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.eyebrow{
+  font-weight:600;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.6rem;color:#C9C8E8;
+}
+.eyebrow::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--grad)}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(7,7,13,.6);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.18rem;letter-spacing:-.03em;display:flex;align-items:center;gap:.55rem}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--grad);display:inline-block;box-shadow:0 0 14px rgba(168,85,247,.7)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:.93rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;justify-content:center;font-weight:600;font-size:.95rem;padding:.78rem 1.4rem;border-radius:999px;transition:transform .18s ease, box-shadow .2s ease, filter .2s;cursor:pointer;border:none}
+.btn-wa{background:var(--wa);color:#04210f;box-shadow:0 10px 30px -10px rgba(37,211,102,.6)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(37,211,102,.75)}
+.btn-grad{background:var(--grad);color:#0a0a12;font-weight:700;box-shadow:0 12px 34px -12px rgba(124,92,255,.8)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-ghost{background:var(--surface);color:var(--text);border:1px solid var(--border-str);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--text);background:var(--surface-2)}
+.nav .btn{padding:.6rem 1.15rem}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.menu-toggle span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+
+/* HERO */
+.hero{position:relative;padding:96px 0 84px}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:.4rem 1rem;font-size:.82rem;color:#C9C8E8;margin-bottom:1.4rem;backdrop-filter:blur(6px)}
+.pill .live{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.3rem);font-weight:800;margin:0 0 1.3rem}
+.hero p.lead{font-size:1.18rem;color:var(--muted);max-width:31em;margin-bottom:2.1rem}
+.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap}
+.hero-trust{margin-top:2.4rem;display:flex;gap:1.8rem;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+.hero-trust b{color:var(--text)}
+
+.hero-visual{position:relative}
+.glass{background:var(--surface);border:1px solid var(--border-str);border-radius:var(--r);padding:22px 24px;box-shadow:0 30px 80px -40px rgba(0,0,0,.8);backdrop-filter:blur(14px)}
+.glass-1{position:relative;z-index:2}
+.glass-1::before{content:"";position:absolute;inset:0;border-radius:var(--r);padding:1px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.5;pointer-events:none}
+.glass-2{position:absolute;right:-14px;bottom:-30px;width:74%;z-index:3;background:rgba(13,13,24,.85);border-color:var(--border-str)}
+.browser-bar{display:flex;gap:6px;margin-bottom:16px}
+.browser-bar i{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.18)}
+.browser-bar i:nth-child(1){background:#FF6058}.browser-bar i:nth-child(2){background:#FFBD2E}.browser-bar i:nth-child(3){background:#28C840}
+.skel{height:11px;border-radius:6px;background:rgba(255,255,255,.08);margin:10px 0}
+.skel.w70{width:70%}.skel.w90{width:90%}.skel.w50{width:50%}
+.skel.accent{background:var(--grad);opacity:.85}
+.glass-2 small{color:var(--muted);font-size:.8rem}
+.glass-2 .metric{font-family:'Bricolage Grotesque';font-weight:800;font-size:2rem;letter-spacing:-.03em;margin:.1rem 0}
+.glass-2 .metric span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-glow{position:absolute;width:340px;height:340px;border-radius:50%;background:var(--grad);filter:blur(80px);opacity:.35;right:-40px;top:-30px;z-index:1}
+
+/* SECTIONS */
+section{padding:84px 0;position:relative}
+.sec-head{max-width:44rem;margin-bottom:48px}
+.sec-head h2{font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:800;margin:.9rem 0 1rem}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+.panel{background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+/* value */
+.value{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.value .big{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.16;letter-spacing:-.02em}
+.value p{color:var(--muted);font-size:1.05rem;margin-top:1rem}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:30px 28px;transition:transform .25s ease, background .25s, border-color .25s;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.card:hover{transform:translateY(-6px);background:var(--surface-2);border-color:var(--border-str)}
+.card:hover::before{transform:scaleX(1)}
+.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--grad-soft);color:#fff;margin-bottom:18px;border:1px solid var(--border)}
+.card h3{font-size:1.32rem;margin-bottom:.6rem}
+.card>p{color:var(--muted);font-size:.96rem;margin-bottom:1.1rem}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.card li{font-size:.92rem;display:flex;align-items:flex-start;gap:.55rem;color:#C4C3DC}
+.card li::before{content:"";flex:0 0 auto;width:16px;height:16px;border-radius:50%;margin-top:3px;background:var(--cyan);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;}
+
+/* diferenciais */
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.feat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:.4rem;transition:.25s}
+.feat:hover{border-color:var(--border-str);background:var(--surface-2)}
+.feat .fi{font-size:1.3rem;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.feat b{font-size:1rem}
+.feat span{font-size:.86rem;color:var(--muted)}
+
+/* portfolio */
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.port{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:transform .25s ease, border-color .25s, background .25s}
+.port:hover{transform:translateY(-6px);border-color:var(--border-str);background:var(--surface-2)}
+.port-thumb{aspect-ratio:16/10;position:relative;display:flex;align-items:flex-end;padding:16px;overflow:hidden}
+.port-thumb .wm{position:absolute;right:-14px;bottom:-18px;width:48%;opacity:.32;color:#fff}
+.port-thumb .scr{position:absolute;left:14px;top:14px;right:34%;height:8px;border-radius:4px;background:rgba(255,255,255,.5)}
+.port-thumb .scr::after{content:"";position:absolute;left:0;top:14px;width:60%;height:6px;border-radius:4px;background:rgba(255,255,255,.32)}
+.thumb-clinica{background:linear-gradient(150deg,#CDEBE9,#0EA5A4)}
+.thumb-eletrica{background:linear-gradient(150deg,#3a3a40,#111);background-image:linear-gradient(150deg,#3a3a40,#111),repeating-linear-gradient(135deg,transparent,transparent 14px,rgba(255,212,0,.14) 14px,rgba(255,212,0,.14) 16px)}
+.thumb-estetica{background:linear-gradient(150deg,#F0D6CF,#B76E79)}
+.thumb-imobiliaria{background:linear-gradient(150deg,#7C9685,#1E3A2F)}
+.thumb-restaurante{background:linear-gradient(150deg,#6b4a30,#231811)}
+/* portfolio real photos (with graceful gradient fallback) */
+.port-thumb{position:relative}
+.port-thumb .ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.port-thumb::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,7,13,.12),rgba(7,7,13,.58))}
+.port-thumb .port-type{position:relative;z-index:2}
+.port-type{background:rgba(7,7,13,.78);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.34rem .8rem;border-radius:999px;backdrop-filter:blur(4px)}
+.port-body{padding:22px 24px 26px}
+.port-body h3{font-size:1.24rem;margin-bottom:.4rem}
+.port-body p{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+.port-link{font-weight:600;font-size:.92rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.port-cta{position:relative;border-color:var(--border-str)}
+.port-cta::after{content:"";position:absolute;inset:0;background:var(--grad-soft)}
+.port-cta-inner{position:relative;padding:34px 26px;display:flex;flex-direction:column;justify-content:center;height:100%;text-align:center}
+.port-cta-plus{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.4rem;line-height:1;margin-bottom:.4rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.port-cta h3{font-size:1.3rem;margin-bottom:.5rem}
+.port-cta p{color:#C4C3DC;font-size:.95rem;margin-bottom:1rem}
+.port-cta .port-link{color:#fff;background:none;-webkit-background-clip:initial}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{position:relative;padding-top:18px}
+.step .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.6rem;letter-spacing:-.04em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
+.step h4{font-size:1.12rem;margin:.4rem 0 .5rem}
+.step p{font-size:.93rem;color:var(--muted)}
+.step::before{content:"";position:absolute;top:0;left:0;width:38px;height:3px;background:var(--grad);border-radius:3px}
+
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.about-card{position:relative;background:var(--surface);border:1px solid var(--border-str);border-radius:24px;padding:40px 36px;overflow:hidden}
+.about-card::after{content:"";position:absolute;right:-70px;bottom:-70px;width:240px;height:240px;border-radius:50%;background:var(--grad);filter:blur(60px);opacity:.4}
+.about-card .avatar{position:relative;width:66px;height:66px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.5rem;color:#0a0a12;margin-bottom:18px;box-shadow:0 0 30px rgba(124,92,255,.5)}
+.about-card h3{position:relative;font-size:1.5rem;margin-bottom:.6rem}
+.about-card p{position:relative;color:#C4C3DC;font-size:1rem}
+.about-text h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:1.1rem}
+.about-text p{color:var(--muted);font-size:1.07rem;margin-bottom:1rem}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:50rem;margin:0 auto}
+.faq{border:1px solid var(--border);border-radius:14px;background:var(--surface);overflow:hidden;transition:border-color .2s}
+.faq.open{border-color:var(--border-str)}
+.faq button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 22px;font-family:'Bricolage Grotesque';font-weight:600;font-size:1.06rem;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq button .chev{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;transition:.3s;font-size:1rem;color:#C9C8E8}
+.faq.open button .chev{transform:rotate(45deg);background:var(--grad);color:#0a0a12}
+.faq .ans{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+.faq .ans p{padding:0 22px 20px;font-size:.97rem}
+.faq .ans p b{color:var(--text)}
+.faq.open .ans{max-height:260px}
+
+/* CTA */
+.cta-shell{position:relative;border-radius:28px;padding:64px 48px;text-align:center;overflow:hidden;border:1px solid var(--border-str);background:var(--bg-2)}
+.cta-shell::before{content:"";position:absolute;inset:0;background:var(--grad-soft)}
+.cta-shell::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--grad);filter:blur(90px);opacity:.32;bottom:-160px;left:50%;transform:translateX(-50%)}
+.cta-shell h2{position:relative;font-size:clamp(2rem,4.2vw,3.1rem);margin-bottom:1rem}
+.cta-shell p{position:relative;color:#C4C3DC;font-size:1.12rem;max-width:34rem;margin:0 auto 2rem}
+.cta-shell .hero-cta{position:relative;justify-content:center}
+
+/* footer */
+footer{padding:56px 0 40px;border-top:1px solid var(--border)}
+.foot{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap}
+.foot .brand{margin-bottom:.6rem}
+.foot p{color:var(--muted);font-size:.92rem;max-width:24rem}
+.foot-links{display:flex;gap:2.4rem;flex-wrap:wrap}
+.foot-col h5{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem;font-family:'Inter';font-weight:600}
+.foot-col a{display:block;font-size:.94rem;color:var(--text);margin-bottom:.5rem;transition:color .2s}
+.foot-col a:hover{color:var(--cyan)}
+.copy{margin-top:40px;padding-top:24px;border-top:1px solid var(--border);font-size:.86rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* FAB */
+.fab{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(37,211,102,.8);transition:transform .2s;animation:pulse 2.4s infinite}
+.fab:hover{transform:scale(1.08)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+@media(max-width:920px){
+  .hero-grid,.value,.about{grid-template-columns:1fr;gap:48px}
+  .hero-visual{max-width:420px}
+  .cards,.steps{grid-template-columns:1fr}
+  .feats,.portfolio-grid{grid-template-columns:1fr 1fr}
+  .nav-links{position:fixed;inset:74px 0 auto 0;background:rgba(10,10,18,.96);backdrop-filter:blur(16px);flex-direction:column;padding:24px;gap:1.2rem;border-bottom:1px solid var(--border);transform:translateY(-130%);transition:transform .3s ease;align-items:stretch}
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:1.05rem}
+  .menu-toggle{display:flex}
+  .menu-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menu-toggle.active span:nth-child(2){opacity:0}
+  .menu-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(max-width:560px){
+  section{padding:60px 0}
+  .feats,.steps,.portfolio-grid{grid-template-columns:1fr}
+  .cta-shell{padding:44px 24px}
+  .glass-2{position:static;width:100%;margin-top:20px}
+  .foot{flex-direction:column}
+}
+</style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="DMB Serviços" class="logo-mark">
-        <span class="logo-text">
-          <strong>DMB Serviços</strong>
-          <small>Manutenção</small>
-        </span>
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="brand">Mateus Olmi<span class="dot"></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="https://wa.me/SEUNUMERO?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="btn btn-grad">Falar no WhatsApp</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="pill"><span class="live"></span> Sites • Lojas virtuais • SEO</span>
+      <h1>Não vendo sites. Crio máquinas de <span class="grad-text">conquistar clientes</span>.</h1>
+      <p class="lead">Sites profissionais e lojas virtuais para empresas do Brasil, Europa e EUA. Modernos, rápidos e preparados para serem encontrados no Google.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/SEUNUMERO?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="btn btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg>
+          Solicitar orçamento
+        </a>
+        <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+      </div>
+      <div class="hero-trust">
+        <span><b>3 a 10 dias</b> de prazo médio</span>
+        <span><b>100%</b> responsivo no celular</span>
+        <span>Atendimento em <b>português</b></span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-glow"></div>
+      <div class="glass glass-1">
+        <div class="browser-bar"><i></i><i></i><i></i></div>
+        <div class="skel w50 accent"></div>
+        <div class="skel w90"></div>
+        <div class="skel w70"></div>
+        <div class="skel w90"></div>
+        <div class="skel w50"></div>
+      </div>
+      <div class="glass glass-2">
+        <small>Visitantes que viram contato</small>
+        <div class="metric">+<span>3×</span> mais pedidos</div>
+        <small>com um site bem estruturado</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE -->
+<section class="panel">
+  <div class="wrap value">
+    <div class="big reveal">Hoje, a primeira coisa que seu cliente faz é <span class="grad-text">pesquisar na internet</span>. Se ele não te encontra, encontra o concorrente.</div>
+    <div class="reveal">
+      <p>Quando alguém procura um produto ou serviço, o instinto é abrir o Google. Sem um site profissional, sua empresa fica invisível justamente na hora em que as pessoas estão prontas para comprar.</p>
+      <p>Meu trabalho é colocar seu negócio nesse mapa — com uma página que transmite confiança e transforma quem visita em quem compra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">O que eu faço</span>
+      <h2>Soluções digitais sob medida para o seu negócio</h2>
+      <p>Do site institucional à loja virtual completa, tudo pensado para gerar resultado de verdade.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+        <h3>Criação de Websites</h3>
+        <p>Sites modernos, rápidos e adaptados a celular, tablet e computador.</p>
+        <ul><li>Sites institucionais</li><li>Clínicas e consultórios</li><li>Restaurantes e comércios</li><li>Imobiliárias e escritórios</li><li>Landing pages</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/><path d="M2 3h2l2.5 13h11l2-9H6"/></svg></div>
+        <h3>Lojas Virtuais</h3>
+        <p>Venda 24 horas por dia para clientes de qualquer cidade ou país.</p>
+        <ul><li>Catálogo de produtos</li><li>Carrinho e pagamento online</li><li>Integração com WhatsApp</li><li>Gestão de pedidos</li><li>Integração com redes sociais</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Otimização para Google</h3>
+        <p>Estrutura de SEO para sua empresa aparecer para quem está procurando.</p>
+        <ul><li>Estrutura técnica de SEO</li><li>Conteúdo estratégico</li><li>Velocidade de carregamento</li><li>Configuração para indexação</li><li>Boas práticas de busca</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais" class="panel">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Por que me escolher</span>
+      <h2>Mais do que páginas bonitas — ferramentas que vendem</h2>
+    </div>
+    <div class="feats">
+      <div class="feat reveal"><span class="fi">◆</span><b>Design moderno</b><span>Visual profissional que transmite confiança.</span></div>
+      <div class="feat reveal"><span class="fi">◆</span><b>Pronto para celular</b><span>Perfeito em qualquer tela, sempre.</span></div>
+      <div class="feat reveal"><span class="fi">◆</span><b>Carregamento rápido</b><span>Velocidade que prende o visitante.</span></div>
+      <div class="feat reveal"><span class="fi">◆</span><b>WhatsApp integrado</b><span>O cliente fala com você em um toque.</span></div>
+      <div class="feat reveal"><span class="fi">◆</span><b>Otimizado p/ Google</b><span>Estrutura preparada para ser achada.</span></div>
+      <div class="feat reveal"><span class="fi">◆</span><b>Fácil de atualizar</b><span>Mude textos e imagens sem dor de cabeça.</span></div>
+      <div class="feat reveal"><span class="fi">◆</span><b>Hospedagem e suporte</b><span>Acompanhamento depois da entrega.</span></div>
+      <div class="feat reveal"><span class="fi">◆</span><b>Brasil, Europa e EUA</b><span>Atendimento em português, onde você estiver.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Portfólio</span>
+      <h2>Exemplos do que posso criar para você</h2>
+      <p>Sites demonstrativos com identidades diferentes — cada negócio tem a sua cara. Clique e veja por dentro.</p>
+    </div>
+    <div class="portfolio-grid">
+      <a href="demo-clinica.html" target="_blank" rel="noopener" class="port reveal">
+        <div class="port-thumb thumb-clinica"><img class="ph-img" loading="lazy" alt="Exemplo de site para clínica médica" src="https://loremflickr.com/640/400/medical,clinic?lock=21"><span class="port-type">Clínica</span></div>
+        <div class="port-body"><h3>Clínica Vida Plena</h3><p>Site de clínica médica com especialidades e agendamento.</p><span class="port-link">Abrir exemplo →</span></div>
       </a>
-      <button class="menu-toggle" aria-label="Abrir menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="active">Início</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="trabalhos.html">Trabalhos</a>
-        <a href="avaliacoes.html">Avaliações</a>
-        <a href="contato.html">Contato</a>
-        <a href="orcamento.html">Orçamento</a>
-        <a href="https://wa.me/5551999299247" class="nav-cta" target="_blank">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero-image">
-    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80&auto=format&fit=crop');"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <i class="fa-solid fa-shield-halved"></i>
-          DMB Serviços · Vale dos Sinos
+      <a href="demo-eletrica.html" target="_blank" rel="noopener" class="port reveal">
+        <div class="port-thumb thumb-eletrica"><img class="ph-img" loading="lazy" alt="Exemplo de site para serviços elétricos" src="https://loremflickr.com/640/400/electrician,electrical?lock=22"><span class="port-type">Serviços</span></div>
+        <div class="port-body"><h3>Voltz Elétrica</h3><p>Site de prestador de serviços com foco em emergência 24h.</p><span class="port-link">Abrir exemplo →</span></div>
+      </a>
+      <a href="demo-estetica.html" target="_blank" rel="noopener" class="port reveal">
+        <div class="port-thumb thumb-estetica"><img class="ph-img" loading="lazy" alt="Exemplo de site para clínica de estética" src="https://loremflickr.com/640/400/spa,beauty?lock=23"><span class="port-type">Estética</span></div>
+        <div class="port-body"><h3>Lumière Estética</h3><p>Site elegante de estética com tratamentos e preços.</p><span class="port-link">Abrir exemplo →</span></div>
+      </a>
+      <a href="demo-imobiliaria.html" target="_blank" rel="noopener" class="port reveal">
+        <div class="port-thumb thumb-imobiliaria"><img class="ph-img" loading="lazy" alt="Exemplo de site para imobiliária" src="https://loremflickr.com/640/400/house,realestate?lock=24"><span class="port-type">Imobiliária</span></div>
+        <div class="port-body"><h3>Horizonte Imóveis</h3><p>Site de imobiliária com vitrine de imóveis e busca.</p><span class="port-link">Abrir exemplo →</span></div>
+      </a>
+      <a href="demo-restaurante.html" target="_blank" rel="noopener" class="port reveal">
+        <div class="port-thumb thumb-restaurante"><img class="ph-img" loading="lazy" alt="Exemplo de site para restaurante" src="https://loremflickr.com/640/400/restaurant,food?lock=25"><span class="port-type">Restaurante</span></div>
+        <div class="port-body"><h3>Trattoria Fornello</h3><p>Site de restaurante com cardápio e reservas.</p><span class="port-link">Abrir exemplo →</span></div>
+      </a>
+      <a href="https://wa.me/SEUNUMERO?text=Olá!%20Quero%20um%20site%20como%20os%20exemplos%20do%20portfólio." class="port port-cta reveal">
+        <div class="port-cta-inner">
+          <span class="port-cta-plus">+</span>
+          <h3>O próximo pode ser o seu</h3>
+          <p>Me chame e criamos um site sob medida para o seu negócio.</p>
+          <span class="port-link">Solicitar orçamento →</span>
         </div>
-        <h1>Soluções completas em <span>elétrica, hidráulica</span> e manutenção</h1>
-        <p>Seu problema resolvido com rapidez e qualidade. Profissionais experientes, preço justo e garantia em todos os serviços.</p>
-        <div class="hero-actions">
-          <a href="https://wa.me/5551999299247?text=Olá!%20Gostaria%20de%20um%20orçamento." class="btn btn-whatsapp" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
-          </a>
-          <a href="orcamento.html" class="btn btn-outline-white">
-            <i class="fa-solid fa-file-invoice"></i> Solicitar orçamento
-          </a>
-        </div>
-        <div class="hero-rating">
-          <span class="hero-rating-stars">★★★★★</span>
-          <span><strong>5.0</strong> · Clientes satisfeitos no Vale dos Sinos</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="trust-strip">
-    <div class="container">
-      <div class="trust-items">
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fa-solid fa-medal"></i></div>
-          <div class="trust-text">
-            <div class="trust-number">+10 anos</div>
-            <div class="trust-label">de experiência</div>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fa-solid fa-users"></i></div>
-          <div class="trust-text">
-            <div class="trust-number">+500</div>
-            <div class="trust-label">clientes atendidos</div>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="trust-text">
-            <div class="trust-number">100%</div>
-            <div class="trust-label">garantia nos serviços</div>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <div class="trust-text">
-            <div class="trust-number">24h</div>
-            <div class="trust-label">atendimento WhatsApp</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="servicos">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Nossos Serviços</span>
-        <h2>Tudo que sua casa ou empresa precisa</h2>
-        <p>Serviço profissional com preço justo e qualidade garantida.</p>
-      </div>
-      <div class="services-grid">
-
-        <a href="servicos.html#eletrica" class="service-card">
-          <div class="service-card-photo">
-            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80&auto=format&fit=crop" alt="Serviços de elétrica" loading="lazy">
-          </div>
-          <div class="service-card-body">
-            <div class="service-icon-float"><i class="fa-solid fa-bolt"></i></div>
-            <h3>Elétrica</h3>
-            <p>Instalações, manutenções e reparos elétricos com segurança e dentro das normas.</p>
-            <span class="service-link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-        <a href="servicos.html#hidraulica" class="service-card">
-          <div class="service-card-photo">
-            <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80&auto=format&fit=crop" alt="Serviços hidráulicos" loading="lazy">
-          </div>
-          <div class="service-card-body">
-            <div class="service-icon-float"><i class="fa-solid fa-faucet"></i></div>
-            <h3>Hidráulica</h3>
-            <p>Vazamentos, instalações de torneiras, registros, descargas e muito mais.</p>
-            <span class="service-link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-        <a href="servicos.html#desentupimento" class="service-card">
-          <div class="service-card-photo">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80&auto=format&fit=crop" alt="Serviços de desentupimento" loading="lazy">
-          </div>
-          <div class="service-card-body">
-            <div class="service-icon-float"><i class="fa-solid fa-toilet"></i></div>
-            <h3>Desentupimento</h3>
-            <p>Pias, vasos, ralos e esgoto externo desentupidos com eficiência.</p>
-            <span class="service-link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-        <a href="servicos.html#pintura" class="service-card">
-          <div class="service-card-photo">
-            <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80&auto=format&fit=crop" alt="Serviços de pintura" loading="lazy">
-          </div>
-          <div class="service-card-body">
-            <div class="service-icon-float"><i class="fa-solid fa-paint-roller"></i></div>
-            <h3>Pintura</h3>
-            <p>Pintura interna, externa, comercial e pequenos reparos de parede.</p>
-            <span class="service-link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-        <a href="servicos.html#calha" class="service-card">
-          <div class="service-card-photo">
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80&auto=format&fit=crop" alt="Limpeza de calha" loading="lazy">
-          </div>
-          <div class="service-card-body">
-            <div class="service-icon-float"><i class="fa-solid fa-cloud-rain"></i></div>
-            <h3>Limpeza de Calha</h3>
-            <p>Mantenha sua calha limpa e evite infiltrações nas chuvas.</p>
-            <span class="service-link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-        <a href="servicos.html#caixa-agua" class="service-card">
-          <div class="service-card-photo">
-            <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&q=80&auto=format&fit=crop" alt="Limpeza de caixa d'água" loading="lazy">
-          </div>
-          <div class="service-card-body">
-            <div class="service-icon-float"><i class="fa-solid fa-droplet"></i></div>
-            <h3>Limpeza de Caixa d'Água</h3>
-            <p>Higienização completa para água limpa e segura para sua família.</p>
-            <span class="service-link">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <div class="about-brief">
-        <div class="about-brief-image">
-          <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=1200&q=80&auto=format&fit=crop" alt="DMB Serviços - Profissional de manutenção" loading="lazy">
-          <div class="about-brief-badge">
-            <strong>+10 anos</strong>
-            <span>no Vale dos Sinos</span>
-          </div>
-        </div>
-        <div class="about-brief-text">
-          <span class="section-eyebrow">Sobre a DMB Serviços</span>
-          <h2>Tradição em manutenção no Vale dos Sinos</h2>
-          <p>A DMB Serviços atua com manutenção e serviços gerais no Vale dos Sinos, oferecendo soluções rápidas, seguras e com foco na satisfação do cliente.</p>
-          <p>Profissionais com experiência prática em elétrica, hidráulica e manutenção predial. Nossa missão é resolver problemas com agilidade e qualidade.</p>
-          <div class="about-brief-features">
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Profissionais experientes e qualificados</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Garantia em todos os serviços</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Preço justo e transparente</div>
-          </div>
-          <a href="sobre.html" class="btn btn-primary">
-            Conheça nossa história <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Como Funciona</span>
-        <h2>Em 4 passos simples</h2>
-        <p>Atendimento descomplicado pra você resolver tudo rápido.</p>
-      </div>
-      <div class="process-steps">
-
-        <div class="process-step">
-          <div class="process-number">1</div>
-          <div class="process-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <h3>Entre em contato</h3>
-          <p>WhatsApp, telefone ou pelo formulário do site.</p>
-        </div>
-
-        <div class="process-step">
-          <div class="process-number">2</div>
-          <div class="process-icon"><i class="fa-solid fa-file-invoice"></i></div>
-          <h3>Recebe orçamento</h3>
-          <p>Retorno rápido com preço claro e transparente.</p>
-        </div>
-
-        <div class="process-step">
-          <div class="process-number">3</div>
-          <div class="process-icon"><i class="fa-solid fa-calendar-check"></i></div>
-          <h3>Agendamos</h3>
-          <p>Marcamos o melhor dia e horário pra você.</p>
-        </div>
-
-        <div class="process-step">
-          <div class="process-number">4</div>
-          <div class="process-icon"><i class="fa-solid fa-circle-check"></i></div>
-          <h3>Serviço entregue</h3>
-          <p>Trabalho feito com qualidade e garantia.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Por que escolher?</span>
-        <h2>Nossos diferenciais</h2>
-        <p>Mais do que um serviço, oferecemos confiança e tranquilidade.</p>
-      </div>
-      <div class="differentials">
-
-        <div class="diff-card">
-          <div class="diff-icon"><i class="fa-solid fa-clock"></i></div>
-          <h3>Atendimento Rápido</h3>
-          <p>Respondemos em minutos e agendamos no mesmo dia quando possível.</p>
-        </div>
-
-        <div class="diff-card">
-          <div class="diff-icon"><i class="fa-solid fa-user-tie"></i></div>
-          <h3>Profissionais Experientes</h3>
-          <p>Equipe treinada, com anos de experiência no Vale dos Sinos.</p>
-        </div>
-
-        <div class="diff-card">
-          <div class="diff-icon"><i class="fa-solid fa-tags"></i></div>
-          <h3>Preço Justo</h3>
-          <p>Orçamento transparente, sem surpresas. O melhor custo-benefício.</p>
-        </div>
-
-        <div class="diff-card">
-          <div class="diff-icon"><i class="fa-solid fa-credit-card"></i></div>
-          <h3>Aceitamos Cartões</h3>
-          <p>Pix, dinheiro, débito e crédito em todas as bandeiras.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Depoimentos</span>
-        <h2>O que nossos clientes dizem</h2>
-      </div>
-      <div class="testimonial-preview">
-        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-        <blockquote>"Atendimento rápido e serviço bem feito. Recomendo!"</blockquote>
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-author">— Cliente satisfeito do Vale dos Sinos</div>
-        <a href="avaliacoes.html" class="btn btn-outline-primary">
-          Ver todas as avaliações <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="region">
-    <div class="container">
-      <i class="fa-solid fa-location-dot"></i>
-      <h2>Atendemos todo o Vale dos Sinos</h2>
-      <p>Cobertura completa nas principais cidades da região com atendimento rápido e profissional.</p>
-      <div class="cities">
-        <span class="city-tag">Novo Hamburgo</span>
-        <span class="city-tag">São Leopoldo</span>
-        <span class="city-tag">Estância Velha</span>
-        <span class="city-tag">Campo Bom</span>
-        <span class="city-tag">Sapiranga</span>
-        <span class="city-tag">Esteio</span>
-        <span class="city-tag">Canoas</span>
-        <span class="city-tag">Portão</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Precisa de um serviço agora?</h2>
-      <p>Fale conosco no WhatsApp e receba seu orçamento em minutos.</p>
-      <a href="https://wa.me/5551999299247?text=Olá!%20Gostaria%20de%20um%20orçamento." class="btn btn-whatsapp" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento Grátis
       </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="DMB Serviços" class="logo-mark">
-            <span class="logo-text">
-              <strong>DMB Serviços</strong>
-              <small>Manutenção</small>
-            </span>
-          </a>
-          <p>Soluções completas em manutenção residencial e comercial. Atendemos todo o Vale dos Sinos com qualidade, rapidez e garantia.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="trabalhos.html">Trabalhos</a></li>
-            <li><a href="avaliacoes.html">Avaliações</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="orcamento.html">Orçamento</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Serviços</h4>
-          <ul>
-            <li><a href="servicos.html#eletrica">Elétrica</a></li>
-            <li><a href="servicos.html#hidraulica">Hidráulica</a></li>
-            <li><a href="servicos.html#desentupimento">Desentupimento</a></li>
-            <li><a href="servicos.html#pintura">Pintura</a></li>
-            <li><a href="servicos.html#calha">Limpeza de Calha</a></li>
-            <li><a href="servicos.html#caixa-agua">Caixa d'Água</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contato</h4>
-          <ul class="footer-contact">
-            <li><i class="fa-brands fa-whatsapp"></i> (51) 99929-9247</li>
-            <li><i class="fa-solid fa-location-dot"></i> Vale dos Sinos, RS</li>
-            <li><i class="fa-solid fa-clock"></i> Atendimento 24h</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 DMB Serviços. Todos os direitos reservados.</span>
-        <div class="payment-methods">
-          <span>Aceitamos:</span>
-          <i class="fa-brands fa-pix"></i>
-          <i class="fa-brands fa-cc-visa"></i>
-          <i class="fa-brands fa-cc-mastercard"></i>
-          <i class="fa-brands fa-cc-amex"></i>
-        </div>
+<!-- PROCESSO -->
+<section id="processo" class="panel">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Do primeiro contato ao site no ar em 4 passos</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h4>Conversamos</h4><p>Entendo sua empresa, seus objetivos e o seu público.</p></div>
+      <div class="step reveal"><div class="num">02</div><h4>Planejamos</h4><p>Definimos estrutura, páginas, conteúdo e funcionalidades.</p></div>
+      <div class="step reveal"><div class="num">03</div><h4>Desenvolvo</h4><p>Crio um projeto moderno, rápido e profissional.</p></div>
+      <div class="step reveal"><div class="num">04</div><h4>Publicamos</h4><p>Seu site entra no ar pronto para gerar oportunidades.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="wrap about">
+    <div class="about-card reveal">
+      <div class="avatar">MO</div>
+      <h3>Mateus Olmi</h3>
+      <p>Criação de sites, lojas virtuais e SEO para empresas que querem crescer na internet. Foco em credibilidade, visibilidade e resultado.</p>
+    </div>
+    <div class="about-text reveal">
+      <h2>Um parceiro digital, não só um fornecedor de site</h2>
+      <p>Trabalho com criação de sites e lojas virtuais para empresas que desejam fortalecer a presença digital, transmitir credibilidade e atrair novos clientes.</p>
+      <p>Meu objetivo não é apenas entregar um site bonito, e sim desenvolver uma ferramenta que ajude o seu negócio a crescer de verdade — atendendo clientes no Brasil, na Europa e nos EUA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="panel">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">Perguntas frequentes</span>
+      <h2>Tirando suas dúvidas</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq reveal"><button>Quanto custa um site?<span class="chev">+</span></button><div class="ans"><p>Os valores variam conforme o projeto, as funcionalidades e a quantidade de páginas. Sites institucionais a partir de <b>€150</b> ou <b>R$900</b>.</p></div></div>
+      <div class="faq reveal"><button>Quanto custa uma loja virtual?<span class="chev">+</span></button><div class="ans"><p>Lojas virtuais a partir de <b>€400</b> ou <b>R$2.500</b>, conforme os recursos necessários (pagamentos, catálogo, integrações).</p></div></div>
+      <div class="faq reveal"><button>Quanto tempo leva para ficar pronto?<span class="chev">+</span></button><div class="ans"><p>A maioria dos projetos é concluída entre <b>3 e 10 dias úteis</b>, dependendo do tamanho.</p></div></div>
+      <div class="faq reveal"><button>O site funciona no celular?<span class="chev">+</span></button><div class="ans"><p>Sim. Todos os projetos são totalmente responsivos e funcionam em celular, tablet e computador.</p></div></div>
+      <div class="faq reveal"><button>Meu site aparecerá no Google?<span class="chev">+</span></button><div class="ans"><p>Todos os sites são entregues com estrutura preparada para indexação e boas práticas de SEO.</p></div></div>
+      <div class="faq reveal"><button>Consigo atualizar o conteúdo depois?<span class="chev">+</span></button><div class="ans"><p>Sim. Dependendo da plataforma utilizada, você poderá atualizar textos, imagens e informações facilmente.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="wrap">
+    <div class="cta-shell reveal">
+      <h2>Vamos colocar sua empresa no mapa?</h2>
+      <p>Conquiste novos clientes, transmita credibilidade e fortaleça sua presença online. Me chame para um orçamento sem compromisso.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/SEUNUMERO?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="btn btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg>
+          Solicitar orçamento
+        </a>
+        <a href="mailto:contato@mateusolmi.com" class="btn btn-ghost">Enviar e-mail</a>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <a href="https://wa.me/5551999299247" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#topo" class="brand">Mateus Olmi<span class="dot"></span></a>
+        <p>Criação de websites, lojas virtuais e SEO para empresas do Brasil, Europa e EUA.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col"><h5>Serviços</h5><a href="#servicos">Websites</a><a href="#servicos">Lojas virtuais</a><a href="#servicos">SEO / Google</a></div>
+        <div class="foot-col"><h5>Empresa</h5><a href="#portfolio">Portfólio</a><a href="#processo">Como funciona</a><a href="#faq">Dúvidas</a></div>
+        <div class="foot-col"><h5>Contato</h5><a href="https://wa.me/SEUNUMERO">WhatsApp</a><a href="mailto:contato@mateusolmi.com">E-mail</a></div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="year"></span> Mateus Olmi Digital — Websites • Lojas Virtuais • SEO</span>
+      <span>Brasil • Europa • EUA</span>
+    </div>
+  </div>
+</footer>
 
-  <script src="js/script.js"></script>
+<a href="https://wa.me/SEUNUMERO?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="fab" aria-label="Falar no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg>
+</a>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const toggle=document.getElementById('menuToggle'),links=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>{toggle.classList.toggle('active');links.classList.toggle('open')});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('active');links.classList.remove('open')}));
+document.querySelectorAll('.faq button').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement,open=item.classList.contains('open');document.querySelectorAll('.faq').forEach(f=>f.classList.remove('open'));if(!open)item.classList.add('open')})});
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* imagens: se não carregar, esconde e mostra o gradiente original */
+document.querySelectorAll('img.ph-img').forEach(img=>{img.addEventListener('error',()=>{img.style.display='none'})});
+</script>
 </body>
 </html>
