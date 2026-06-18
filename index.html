@@ -8,7 +8,7 @@
 <meta name="author" content="mundoWS" />
 <meta name="robots" content="index,follow" />
 <meta name="theme-color" content="#07070D" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23A855F7'/><stop offset='.5' stop-color='%236366F1'/><stop offset='1' stop-color='%2322D3EE'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='%2307070D'/><g fill='none' stroke='url(%23g)' stroke-width='2'><rect x='6' y='8' width='20' height='16' rx='3'/><path d='M6 13h20'/><circle cx='16' cy='18.5' r='4'/><path d='M12 18.5h8M16 14.5c1.7 1.1 1.7 6.9 0 8c-1.7-1.1-1.7-6.9 0-8Z'/></g></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2307070D'/><path d='M5 22V17a4.6 4.6 0 0 1 9.2 0V22M14.2 17a4.6 4.6 0 0 1 9.2 0V22' fill='none' stroke='%23EDECF7' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/><path d='M9.4 10V15a4.6 4.6 0 0 0 9.2 0V10M18.6 15a4.6 4.6 0 0 0 9.2 0V10' fill='none' stroke='%233B6BFF' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
 <!-- Open Graph / preview ao compartilhar (WhatsApp, Instagram, Facebook, LinkedIn) -->
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
@@ -78,7 +78,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,7,13,.6);backdrop-filt
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.18rem;letter-spacing:-.03em;display:flex;align-items:center;gap:.55rem}
 .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--grad);display:inline-block;box-shadow:0 0 14px rgba(168,85,247,.7)}
-.brand .logo-mark{display:inline-flex;width:26px;height:26px;flex:0 0 auto;filter:drop-shadow(0 0 10px rgba(124,92,255,.45))}
+.brand .logo-mark{display:inline-flex;flex:0 0 auto;filter:drop-shadow(0 0 10px rgba(47,107,255,.45))}
+.brand .logo-mark svg{height:26px;width:auto;display:block}
+.has-bg{position:relative;overflow:hidden}
+.has-bg>.wrap{position:relative;z-index:1}
+.sec-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.14;z-index:0;pointer-events:none;filter:grayscale(.2)}
 .brand .logo-word{font-family:'Bricolage Grotesque';font-weight:700;letter-spacing:-.01em}
 .brand .logo-word b{font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .nav-links{display:flex;gap:2rem;align-items:center}
@@ -282,7 +286,7 @@ footer{padding:56px 0 40px;border-top:1px solid var(--border)}
 
 <header>
   <div class="wrap nav">
-    <a href="#topo" class="brand" aria-label="mundoWS"><span class="logo-mark"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><rect x="2.5" y="4.5" width="19" height="15" rx="3" stroke="url(#lg)" stroke-width="1.7"/><path d="M2.5 8.5h19" stroke="url(#lg)" stroke-width="1.5"/><circle cx="5.2" cy="6.5" r=".75" fill="#A855F7"/><circle cx="7.5" cy="6.5" r=".75" fill="#6366F1"/><circle cx="12" cy="14" r="3.7" stroke="url(#lg)" stroke-width="1.4"/><path d="M8.3 14h7.4M12 10.3c1.7 1.1 1.7 6.3 0 7.4c-1.7-1.1-1.7-6.3 0-7.4Z" stroke="url(#lg)" stroke-width="1.1"/></svg></span><span class="logo-word">mundo<b>WS</b></span></a>
+    <a href="#topo" class="brand" aria-label="mundoWS"><span class="logo-mark"><svg viewBox="0 4 40 22" fill="none" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EDECF7"/><stop offset="1" stop-color="#C9C8E8"/></linearGradient></defs><path d="M4 22V15.5a6.2 6.2 0 0 1 12.4 0V22M16.4 15.5a6.2 6.2 0 0 1 12.4 0V22" stroke="url(#lg)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8.4V14.6a6.2 6.2 0 0 0 12.4 0V8.4M23.4 14.6a6.2 6.2 0 0 0 12.4 0V8.4" stroke="#3B6BFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-word">mundo<b>WS</b></span></a>
     <nav class="nav-links" id="navLinks">
       <a href="#servicos">Serviços</a>
       <a href="#diferenciais">Diferenciais</a>
@@ -315,7 +319,8 @@ footer{padding:56px 0 40px;border-top:1px solid var(--border)}
 </section>
 
 <!-- VALUE -->
-<section class="panel">
+<section class="panel has-bg">
+  <img class="sec-bg ph-img" loading="lazy" alt="" aria-hidden="true" src="https://loremflickr.com/1280/720/technology,code?lock=80">
   <div class="wrap value">
     <div class="big reveal">Hoje, a primeira coisa que seu cliente faz é <span class="grad-text">pesquisar na internet</span>. Se ele não te encontra, encontra o concorrente.</div>
     <div class="reveal">
@@ -418,7 +423,8 @@ footer{padding:56px 0 40px;border-top:1px solid var(--border)}
 </section>
 
 <!-- PROCESSO -->
-<section id="processo" class="panel">
+<section id="processo" class="panel has-bg">
+  <img class="sec-bg ph-img" loading="lazy" alt="" aria-hidden="true" src="https://loremflickr.com/1280/720/website,developer?lock=81">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Como funciona</span>
@@ -490,7 +496,7 @@ footer{padding:56px 0 40px;border-top:1px solid var(--border)}
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#topo" class="brand" aria-label="mundoWS"><span class="logo-mark"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A855F7"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><rect x="2.5" y="4.5" width="19" height="15" rx="3" stroke="url(#lg)" stroke-width="1.7"/><path d="M2.5 8.5h19" stroke="url(#lg)" stroke-width="1.5"/><circle cx="5.2" cy="6.5" r=".75" fill="#A855F7"/><circle cx="7.5" cy="6.5" r=".75" fill="#6366F1"/><circle cx="12" cy="14" r="3.7" stroke="url(#lg)" stroke-width="1.4"/><path d="M8.3 14h7.4M12 10.3c1.7 1.1 1.7 6.3 0 7.4c-1.7-1.1-1.7-6.3 0-7.4Z" stroke="url(#lg)" stroke-width="1.1"/></svg></span><span class="logo-word">mundo<b>WS</b></span></a>
+        <a href="#topo" class="brand" aria-label="mundoWS"><span class="logo-mark"><svg viewBox="0 4 40 22" fill="none" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EDECF7"/><stop offset="1" stop-color="#C9C8E8"/></linearGradient></defs><path d="M4 22V15.5a6.2 6.2 0 0 1 12.4 0V22M16.4 15.5a6.2 6.2 0 0 1 12.4 0V22" stroke="url(#lg)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8.4V14.6a6.2 6.2 0 0 0 12.4 0V8.4M23.4 14.6a6.2 6.2 0 0 0 12.4 0V8.4" stroke="#3B6BFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-word">mundo<b>WS</b></span></a>
         <p>Criação de websites, lojas virtuais e SEO para empresas do Brasil, Europa e EUA.</p>
       </div>
       <div class="foot-links">
