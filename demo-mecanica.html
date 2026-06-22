@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#121214"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23121214'/><path d='M10 13a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v1h1a2 2 0 0 1 0 4h-1v1a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3v-1H9a2 2 0 0 1 0-4h1zm2 .5v5h8v-5zm2.5 1.5a.5.5 0 1 0 0 1h3a.5.5 0 1 0 0-1z' fill='%23E11D2A'/><circle cx='12.5' cy='19.5' r='1.5' fill='%23E11D2A'/><circle cx='19.5' cy='19.5' r='1.5' fill='%23E11D2A'/></svg>"/>
+<title>TurboCar Auto Center — Mecânica e revisão automotiva</title>
+<meta name="description" content="TurboCar Auto Center: revisão completa, troca de óleo, freios, suspensão, injeção eletrônica e ar-condicionado. Diagnóstico gratuito, orçamento sem compromisso."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:title" content="TurboCar Auto Center — Mecânica e revisão automotiva"/>
+<meta property="og:description" content="Mecânica completa com diagnóstico gratuito e orçamento sem compromisso. Mais de 15 anos cuidando do seu carro com transparência e qualidade."/>
+<meta property="og:image" content="https://loremflickr.com/1200/630/mechanic,garage?lock=120"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="TurboCar Auto Center — Mecânica e revisão automotiva"/>
+<meta name="twitter:description" content="Mecânica completa com diagnóstico gratuito e orçamento sem compromisso."/>
+<meta name="twitter:image" content="https://loremflickr.com/1200/630/mechanic,garage?lock=120"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E11D2A;--red-d:#B5161F;--black:#121214;--ink:#1E1E22;--steel:#E6E8EC;--gray:#9A9AA5;--line:#2C2C32;--paper:#fff;--soft:#F4F4F6}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:'Inter',sans-serif;color:var(--black);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.head-font{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.01em;text-transform:uppercase;line-height:.95}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* BADGE */
+.demo-badge{background:var(--red);color:#fff;text-align:center;font-size:.78rem;letter-spacing:.06em;padding:7px;font-weight:700}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:40;background:var(--black);border-bottom:3px solid var(--red)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.7rem;color:#fff}
+.brand .gear-box{width:44px;height:44px;background:var(--red);display:grid;place-items:center;clip-path:polygon(10% 0,90% 0,100% 50%,90% 100%,10% 100%,0 50%)}
+.brand .name{font-family:'Oswald';font-size:1.45rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.brand .name span{color:var(--red)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:#cfcfd6;font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;transition:.15s}
+.nav-links a:hover{color:var(--red)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;padding:.85rem 1.6rem;cursor:pointer;border:none;transition:.18s;text-transform:uppercase;letter-spacing:.04em;font-size:.88rem;font-family:'Inter',sans-serif}
+.btn-r{background:var(--red);color:#fff;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.btn-r:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn-d{background:var(--black);color:#fff;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.btn-d:hover{background:#2e2e36;transform:translateY(-2px)}
+.btn-o{background:transparent;border:2px solid rgba(255,255,255,.38);color:#fff;clip-path:none}
+.btn-o:hover{border-color:var(--red);color:var(--red)}
+.btn-cta-dark{background:var(--black);color:#fff;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);padding:1rem 2.2rem;font-size:.96rem}
+.btn-cta-dark:hover{background:#2e2e36;transform:translateY(-2px)}
+
+/* HERO */
+.hero{background:var(--black);color:#fff;position:relative;overflow:hidden;padding:88px 0}
+.hero::before{content:"";position:absolute;top:0;right:0;width:50%;height:100%;background:repeating-linear-gradient(135deg,transparent,transparent 18px,rgba(225,29,42,.05) 18px,rgba(225,29,42,.05) 20px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;position:relative}
+.kick{display:inline-flex;align-items:center;gap:.55rem;background:rgba(225,29,42,.15);color:var(--red);font-weight:700;font-size:.82rem;padding:.5rem 1rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.4rem;border-left:3px solid var(--red)}
+.hero h1{font-size:clamp(2.8rem,6.5vw,4.8rem);margin-bottom:1.2rem}
+.hero h1 .rl{color:var(--red)}
+.hero p{color:var(--gray);font-size:1.12rem;max-width:32em;margin-bottom:2.2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.diag{margin-top:2.6rem;display:inline-flex;align-items:center;gap:1rem;border-left:4px solid var(--red);padding-left:1rem}
+.diag .big{font-family:'Oswald';font-size:1.6rem;color:#fff;font-weight:600}
+.diag span{display:block;font-size:.8rem;color:var(--gray);text-transform:uppercase;letter-spacing:.07em}
+.hero-visual{aspect-ratio:1/1;background:linear-gradient(150deg,#1e1e22,#121214);border:2px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden}
+.hero-visual::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(18,18,20,.28),rgba(18,18,20,.64))}
+.hero-svg{position:relative;z-index:2;width:80%;opacity:.9}
+
+/* MARQUEE */
+.marquee{background:var(--red);color:#fff;padding:14px 0;overflow:hidden;white-space:nowrap}
+.marquee div{display:inline-block;font-family:'Oswald';font-size:1.25rem;text-transform:uppercase;letter-spacing:.05em;animation:scroll 26s linear infinite}
+.marquee span{margin:0 1.4rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{padding:88px 0}
+.sh{margin-bottom:54px;max-width:44rem}
+.sh .ey{color:var(--red-d);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem}
+.sh h2{font-size:clamp(2rem,4.5vw,3.1rem);margin:.6rem 0}
+.sh p{color:#555}
+
+/* SERVICES GRID */
+.servs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:2px solid var(--black)}
+.serv{background:#fff;padding:36px 30px;transition:.22s;position:relative}
+.serv:hover{background:var(--black);color:#fff}
+.serv:hover p{color:var(--gray)}
+.serv .n{font-family:'Oswald';font-size:1.7rem;color:var(--red);margin-bottom:.6rem;font-weight:700}
+.serv:hover .n{color:var(--red)}
+.serv h3{font-family:'Oswald';font-size:1.2rem;text-transform:uppercase;margin-bottom:.6rem;letter-spacing:.02em}
+.serv p{color:#666;font-size:.94rem;line-height:1.55}
+.serv .icon{font-size:1.5rem;margin-bottom:.7rem;display:block}
+
+/* NUMBERS */
+.why{background:var(--ink);color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.why-item{padding:20px 10px}
+.why-item .num{font-family:'Oswald';font-size:3.2rem;color:var(--red);line-height:1;font-weight:700}
+.why-item b{display:block;margin:.4rem 0 .3rem;text-transform:uppercase;letter-spacing:.03em;font-size:.95rem}
+.why-item span{color:var(--gray);font-size:.88rem}
+
+/* DIFFERENTIALS */
+.diffs{background:var(--soft);padding:80px 0}
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.diff-card{background:#fff;border:1px solid #e0e0e6;border-top:4px solid var(--red);padding:28px 26px;transition:.18s}
+.diff-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-3px)}
+.diff-card .dicon{font-size:2rem;margin-bottom:.8rem;display:block}
+.diff-card h4{font-family:'Oswald';font-size:1.1rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.5rem}
+.diff-card p{color:#666;font-size:.91rem;line-height:1.55}
+
+/* PHOTO SECTION */
+.garage{background:var(--black);padding:80px 0;overflow:hidden}
+.garage-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;min-height:380px}
+.garage-img{position:relative;overflow:hidden}
+.garage-img::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(18,18,20,.5),rgba(225,29,42,.18))}
+.garage-text{background:var(--red);display:flex;flex-direction:column;justify-content:center;padding:54px 48px;color:#fff}
+.garage-text .pre{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;opacity:.8;margin-bottom:.7rem;font-weight:700}
+.garage-text h2{font-family:'Oswald';font-size:clamp(2rem,4vw,2.9rem);font-weight:700;text-transform:uppercase;line-height:1;margin-bottom:1.2rem}
+.garage-text p{font-size:1rem;opacity:.9;margin-bottom:2rem;line-height:1.6;max-width:28em}
+.btn-white{background:#fff;color:var(--red);clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);display:inline-flex;align-items:center;gap:.5rem;font-weight:700;padding:.85rem 1.6rem;cursor:pointer;border:none;transition:.18s;text-transform:uppercase;letter-spacing:.04em;font-size:.88rem;font-family:'Inter',sans-serif}
+.btn-white:hover{background:var(--black);color:#fff;transform:translateY(-2px)}
+
+/* CTA */
+.cta{background:var(--steel);text-align:center;padding:82px 0}
+.cta h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.9rem}
+.cta p{font-size:1.12rem;font-weight:500;margin-bottom:2rem;color:#444;max-width:38em;margin-left:auto;margin-right:auto}
+.cta .sub{font-size:.88rem;color:#888;margin-top:1rem;display:block}
+
+/* FOOTER */
+footer{background:var(--black);color:#9a9aa3;padding:56px 0 30px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot-brand{margin-bottom:1rem}
+.foot-brand .name{font-family:'Oswald';font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;font-weight:700}
+.foot-brand .name span{color:var(--red)}
+.foot > div:first-child p{font-size:.9rem;max-width:22rem;margin-top:.6rem}
+.foot-c h5{color:var(--red);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.9rem;font-weight:700}
+.foot-c a,.foot-c p{display:block;font-size:.9rem;margin-bottom:.5rem;transition:.15s}
+.foot-c a:hover{color:#fff}
+.copy{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-size:.83rem;text-align:center}
+
+/* IMAGES */
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid,.garage-inner,.diff-grid{grid-template-columns:1fr}
+  .servs{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .nav-links{display:none}
+  .hero-visual{display:none}
+  .garage-img{min-height:260px}
+  .garage-text{padding:38px 28px}
+}
+@media(max-width:560px){
+  .servs{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">🔧 PROJETO DEMONSTRATIVO — criado por mundoWS · seu site pode ser assim</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="gear-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+          <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </span>
+      <span class="name">TURBO<span>CAR</span></span>
+    </div>
+    <nav class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#numeros">A Oficina</a>
+      <a href="#contato">Contato</a>
+      <a href="#contato" class="btn btn-r">Agendar serviço</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kick">🔧 Diagnóstico gratuito · Orçamento sem compromisso</span>
+      <h1 class="head-font">Seu carro<br>nas mãos <span class="rl">certas,</span><br>sem enrolação</h1>
+      <p>Mecânica completa, revisão e diagnóstico eletrônico. Transparência total no orçamento, peças originais e mão de obra garantida. Você aprovando, a gente começa.</p>
+      <div class="hero-cta">
+        <a href="#contato" class="btn btn-r">Agendar serviço</a>
+        <a href="#servicos" class="btn btn-o">Ver serviços</a>
+      </div>
+      <div class="diag">
+        <div>
+          <span>Diagnóstico eletrônico</span>
+          <div class="big">GRÁTIS na primeira visita</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img class="ph-img" loading="lazy" alt="Mecânico trabalhando no motor" src="https://loremflickr.com/700/700/mechanic,garage?lock=120">
+      <svg class="hero-svg" viewBox="0 0 400 400" width="82%" fill="none">
+        <circle cx="200" cy="200" r="155" stroke="rgba(225,29,42,.2)" stroke-width="2" stroke-dasharray="8 12"/>
+        <circle cx="200" cy="200" r="115" stroke="rgba(225,29,42,.3)" stroke-width="2"/>
+        <!-- gear shape -->
+        <g transform="translate(200,200)">
+          <circle r="38" fill="#E11D2A" opacity=".9"/>
+          <circle r="22" fill="#121214"/>
+          <g fill="#E11D2A" opacity=".9">
+            <rect x="-9" y="-54" width="18" height="16" rx="3"/>
+            <rect x="-9" y="38" width="18" height="16" rx="3"/>
+            <rect x="38" y="-9" width="16" height="18" rx="3" transform="rotate(0)"/>
+            <rect x="-54" y="-9" width="16" height="18" rx="3"/>
+            <rect x="13" y="-52" width="18" height="16" rx="3" transform="rotate(45,13,-52)"/>
+            <rect x="-31" y="36" width="18" height="16" rx="3" transform="rotate(45,-31,36)"/>
+            <rect x="36" y="13" width="16" height="18" rx="3" transform="rotate(45,36,13)"/>
+            <rect x="-52" y="-31" width="16" height="18" rx="3" transform="rotate(45,-52,-31)"/>
+          </g>
+        </g>
+        <!-- wrench hint -->
+        <g opacity=".5" stroke="#E11D2A" stroke-width="5" stroke-linecap="round">
+          <path d="M300 100 L330 70"/>
+          <path d="M70 320 L100 290"/>
+        </g>
+        <circle cx="300" cy="100" r="8" fill="#E11D2A" opacity=".6"/>
+        <circle cx="70" cy="320" r="8" fill="#E11D2A" opacity=".6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div>
+    <span>REVISÃO COMPLETA</span>•<span>FREIOS</span>•<span>SUSPENSÃO</span>•<span>INJEÇÃO ELETRÔNICA</span>•<span>DIAGNÓSTICO</span>•<span>AR-CONDICIONADO</span>•<span>TROCA DE ÓLEO</span>•<span>REVISÃO COMPLETA</span>•<span>FREIOS</span>•<span>SUSPENSÃO</span>•<span>INJEÇÃO ELETRÔNICA</span>•<span>DIAGNÓSTICO</span>•<span>AR-CONDICIONADO</span>•<span>TROCA DE ÓLEO</span>•
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">O que fazemos</span>
+      <h2 class="head-font">Serviços automotivos completos</h2>
+      <p>Do óleo ao scanner eletrônico — tudo na mesma oficina, com profissionais certificados e garantia em cada serviço.</p>
+    </div>
+    <div class="servs">
+      <div class="serv">
+        <span class="icon">🔩</span>
+        <div class="n">01</div>
+        <h3>Revisão Completa</h3>
+        <p>Inspeção de todos os sistemas do veículo com checklist detalhado e relatório transparente ao cliente.</p>
+      </div>
+      <div class="serv">
+        <span class="icon">🛢️</span>
+        <div class="n">02</div>
+        <h3>Troca de Óleo &amp; Filtros</h3>
+        <p>Lubrificantes originais ou premium, com troca de filtro de óleo, ar e combustível conforme o fabricante.</p>
+      </div>
+      <div class="serv">
+        <span class="icon">🔴</span>
+        <div class="n">03</div>
+        <h3>Freios</h3>
+        <p>Diagnóstico, substituição de pastilhas, discos e fluido de freio para máxima segurança nas estradas.</p>
+      </div>
+      <div class="serv">
+        <span class="icon">⚙️</span>
+        <div class="n">04</div>
+        <h3>Suspensão &amp; Direção</h3>
+        <p>Alinhamento, balanceamento, amortecedores e geometria para um carro estável e preciso na direção.</p>
+      </div>
+      <div class="serv">
+        <span class="icon">💻</span>
+        <div class="n">05</div>
+        <h3>Injeção Eletrônica</h3>
+        <p>Scanner automotivo de última geração para leitura de falhas, limpeza de bicos e reprogramação de sensores.</p>
+      </div>
+      <div class="serv">
+        <span class="icon">❄️</span>
+        <div class="n">06</div>
+        <h3>Ar-Condicionado</h3>
+        <p>Recarga de gás, higienização, troca de filtro de cabine e reparo do sistema de climatização completo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="numeros" class="why">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey" style="color:var(--red)">Números que falam por si</span>
+      <h2 class="head-font" style="color:#fff">Experiência que você vê no resultado</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="num">+15</div>
+        <b>Anos de experiência</b>
+        <span>Tradição e confiança no mercado</span>
+      </div>
+      <div class="why-item">
+        <div class="num">+10k</div>
+        <b>Carros revisados</b>
+        <span>Clientes satisfeitos em toda região</span>
+      </div>
+      <div class="why-item">
+        <div class="num">12</div>
+        <b>Mecânicos especializados</b>
+        <span>Certificados e em constante treinamento</span>
+      </div>
+      <div class="why-item">
+        <div class="num">90d</div>
+        <b>Garantia do serviço</b>
+        <span>Peças e mão de obra garantidos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="diffs">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">Por que a TurboCar</span>
+      <h2 class="head-font">O que nos diferencia</h2>
+      <p>Não somos mais uma oficina. Somos a oficina em que você entra sabendo o que vai pagar e sai sabendo que foi feito certo.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <span class="dicon">📋</span>
+        <h4>Orçamento antes de mexer</h4>
+        <p>Nenhum parafuso é trocado sem a sua aprovação. Você vê o orçamento detalhado e decide.</p>
+      </div>
+      <div class="diff-card">
+        <span class="dicon">🔍</span>
+        <h4>Diagnóstico eletrônico gratuito</h4>
+        <p>Scanner profissional na primeira visita, sem custo. Identificamos o problema antes de qualquer serviço.</p>
+      </div>
+      <div class="diff-card">
+        <span class="dicon">🛡️</span>
+        <h4>Garantia em tudo</h4>
+        <p>90 dias de garantia em peças e serviço. Problema voltou? A gente resolve, sem discussão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="garage">
+  <div class="wrap">
+    <div class="garage-inner">
+      <div class="garage-img">
+        <img class="ph-img" loading="lazy" alt="Interior da oficina TurboCar" src="https://loremflickr.com/800/500/car,engine?lock=125">
+      </div>
+      <div class="garage-text">
+        <p class="pre">Nossa estrutura</p>
+        <h2>Equipada para qualquer carro</h2>
+        <p>Trabalhamos com as principais marcas: nacionais, importadas e SUVs. Nossa estrutura conta com elevadores hidráulicos, scanner multimarcas e ferramental de última geração.</p>
+        <a href="#contato" class="btn-white">Agendar uma visita</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="contato" class="cta">
+  <div class="wrap">
+    <h2 class="head-font">Seu carro precisa de atenção?</h2>
+    <p>Agende agora, atendemos de segunda a sábado. Diagnóstico gratuito na primeira visita — sem compromisso, sem surpresas no final.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="#" class="btn btn-r" style="font-size:.96rem;padding:1rem 2.2rem">📲 Chamar no WhatsApp</a>
+      <a href="#" class="btn-cta-dark btn">📞 Ligar agora</a>
+    </div>
+    <span class="sub">📍 Rua das Oficinas, 1234 — Atendimento: Seg–Sex 8h–18h · Sáb 8h–13h</span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="foot-brand">
+          <span class="name">TURBO<span>CAR</span> AUTO CENTER</span>
+        </div>
+        <p>Mecânica completa com diagnóstico gratuito, orçamento transparente e garantia em todos os serviços. Mais de 15 anos cuidando do seu carro.</p>
+      </div>
+      <div class="foot-c">
+        <h5>Contato</h5>
+        <p>📞 (00) 0 0000-0000</p>
+        <p>📍 Rua das Oficinas, 1234</p>
+        <p>🕐 Seg–Sex: 8h–18h · Sáb: 8h–13h</p>
+        <p>✉️ contato@turbocar.com.br</p>
+      </div>
+      <div class="foot-c">
+        <h5>Serviços</h5>
+        <a href="#servicos">Revisão Completa</a>
+        <a href="#servicos">Troca de Óleo</a>
+        <a href="#servicos">Freios</a>
+        <a href="#servicos">Suspensão &amp; Direção</a>
+        <a href="#servicos">Injeção Eletrônica</a>
+        <a href="#servicos">Ar-Condicionado</a>
+      </div>
+    </div>
+    <div class="copy">© TurboCar Auto Center — site demonstrativo desenvolvido por mundoWS</div>
+  </div>
+</footer>
+
+<script>document.querySelectorAll('img.ph-img').forEach(i=>i.addEventListener('error',()=>i.style.display='none'));</script>
+<a href="#" id="wa-fab-demo" aria-label="Falar no WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:99;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg></a>
+</body>
+</html>

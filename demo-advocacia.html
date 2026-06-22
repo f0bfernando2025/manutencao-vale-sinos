@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#0E1B2E"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E1B2E'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='20'>⚖️</text></svg>"/>
+<title>Martins &amp; Associados — Advocacia</title>
+<meta name="description" content="Escritório de advocacia com mais de 20 anos de experiência. Direito Trabalhista, Civil, Família, Empresarial, Previdenciário e do Consumidor. Agende sua consulta avaliativa."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:title" content="Martins &amp; Associados — Advocacia"/>
+<meta property="og:description" content="Defendemos seus direitos com seriedade, ética e dedicação. Mais de 20 anos de experiência em diversas áreas do direito. Primeira consulta avaliativa."/>
+<meta property="og:image" content="https://loremflickr.com/1200/630/law,justice,lawyer?lock=80"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1B2E;--navy-d:#16263E;--gold:#C9A24B;--gold-d:#A8832E;--gold-l:#E2C47A;--cream:#F4F1EA;--warm:#EDE9DF;--gray:#8A8A94;--line:#1E2D42;--paper:#fff}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:'Inter',sans-serif;color:var(--navy);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Playfair Display',serif}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* Badge */
+.demo-badge{background:var(--gold);color:var(--navy);text-align:center;font-size:.78rem;letter-spacing:.06em;padding:8px;font-weight:700;font-family:'Inter',sans-serif}
+
+/* Header */
+header{position:sticky;top:0;z-index:40;background:var(--navy);border-bottom:2px solid var(--gold)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:.75rem;color:#fff}
+.brand-mark{width:44px;height:44px;background:var(--gold);display:grid;place-items:center;border-radius:2px;flex-shrink:0}
+.brand-mark svg{width:26px;height:26px}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:700;color:#fff;letter-spacing:.01em}
+.brand-sub{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);margin-top:.15rem}
+.nav-links{display:flex;gap:1.8rem;align-items:center}
+.nav-links a{color:#c8ccd4;font-weight:500;font-size:.88rem;letter-spacing:.03em}
+.nav-links a:hover{color:var(--gold-l)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;padding:.82rem 1.6rem;cursor:pointer;border:none;transition:.18s;letter-spacing:.04em;font-size:.88rem;font-family:'Inter',sans-serif}
+.btn-g{background:var(--gold);color:var(--navy)}
+.btn-g:hover{background:var(--gold-d);transform:translateY(-2px)}
+.btn-o{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-o:hover{border-color:var(--gold);color:var(--gold-l)}
+.btn-n{background:var(--navy);color:#fff;border:2px solid var(--navy)}
+.btn-n:hover{background:var(--navy-d);transform:translateY(-2px)}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:90px 0}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 48px,rgba(201,162,75,.04) 48px,rgba(201,162,75,.04) 50px),repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(201,162,75,.04) 48px,rgba(201,162,75,.04) 50px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative}
+.kick{display:inline-flex;align-items:center;gap:.5rem;background:rgba(201,162,75,.14);color:var(--gold-l);font-weight:600;font-size:.8rem;padding:.48rem 1rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.4rem;border-left:3px solid var(--gold)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,3.8rem);margin-bottom:1.2rem;line-height:1.15}
+.hero h1 em{color:var(--gold-l);font-style:italic}
+.hero p{color:#b0b8c6;font-size:1.08rem;max-width:34em;margin-bottom:2.2rem;line-height:1.75}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-note{margin-top:2.6rem;display:inline-flex;align-items:center;gap:1rem;border-left:3px solid var(--gold);padding-left:1.1rem}
+.hero-note span{display:block;font-size:.8rem;color:#8a96aa;text-transform:uppercase;letter-spacing:.08em}
+.hero-note strong{display:block;font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;margin-top:.2rem}
+.hero-visual{aspect-ratio:4/5;background:linear-gradient(150deg,#1a2d48,#0E1B2E);position:relative;overflow:hidden;border:1px solid rgba(201,162,75,.2);box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.hero-visual::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,27,46,.2) 0%,rgba(14,27,46,.55) 100%)}
+.hero-badge{position:absolute;bottom:24px;left:24px;z-index:2;background:var(--gold);color:var(--navy);padding:.6rem 1rem;font-weight:700;font-size:.82rem;letter-spacing:.04em}
+
+/* Marquee */
+.marquee{background:var(--gold);color:var(--navy);padding:14px 0;overflow:hidden;white-space:nowrap}
+.marquee div{display:inline-block;font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;letter-spacing:.04em;animation:scroll 28s linear infinite}
+.marquee span{margin:0 1.4rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Sections */
+section{padding:90px 0}
+.sh{margin-bottom:56px;max-width:44rem}
+.sh .ey{color:var(--gold-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-family:'Inter',sans-serif}
+.sh h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3rem);margin:.7rem 0 .9rem;line-height:1.2}
+.sh p{color:#555;line-height:1.75}
+
+/* Áreas (serviços) */
+.areas-bg{background:var(--cream)}
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(14,27,46,.12)}
+.area{background:var(--paper);padding:36px 28px;transition:.22s;border-bottom:3px solid transparent}
+.area:hover{background:var(--navy);color:#fff;border-bottom-color:var(--gold)}
+.area:hover p{color:#9aaabf}
+.area .n{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold-d);margin-bottom:.6rem;line-height:1}
+.area:hover .n{color:var(--gold-l)}
+.area h3{font-family:'Playfair Display',serif;font-size:1.18rem;margin-bottom:.6rem;line-height:1.3}
+.area p{color:#666;font-size:.93rem;line-height:1.6}
+
+/* Números */
+.nums{background:var(--navy);color:#fff}
+.nums .sh .ey{color:var(--gold-l)}
+.nums .sh h2{color:#fff}
+.nums .sh p{color:#8a96aa}
+.nums-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;text-align:center}
+.num-item{padding:28px 16px;border:1px solid rgba(201,162,75,.18);position:relative}
+.num-item::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:40px;height:3px;background:var(--gold)}
+.num-item .big{font-family:'Playfair Display',serif;font-size:2.8rem;color:var(--gold);line-height:1;margin-bottom:.5rem}
+.num-item b{display:block;font-size:.95rem;font-weight:700;margin-bottom:.3rem;color:#fff;text-transform:uppercase;letter-spacing:.04em}
+.num-item span{color:#8a96aa;font-size:.88rem}
+
+/* Diferenciais */
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.diff-img{position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid rgba(14,27,46,.1)}
+.diff-img::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(14,27,46,.28),transparent)}
+.diff-list{list-style:none;margin-top:1.6rem}
+.diff-list li{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid rgba(14,27,46,.1)}
+.diff-list li:last-child{border-bottom:none}
+.diff-icon{width:36px;height:36px;background:var(--gold);display:grid;place-items:center;flex-shrink:0;font-size:1.1rem}
+.diff-text strong{display:block;font-weight:700;margin-bottom:.25rem;font-size:.96rem}
+.diff-text span{color:#666;font-size:.9rem}
+
+/* CTA */
+.cta{background:var(--navy-d);text-align:center;padding:88px 0;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent,transparent 40px,rgba(201,162,75,.04) 40px,rgba(201,162,75,.04) 41px)}
+.cta-inner{position:relative}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.2rem);color:#fff;margin-bottom:1rem;line-height:1.2}
+.cta h2 em{color:var(--gold-l);font-style:italic}
+.cta p{font-size:1.05rem;color:#9aaabf;margin-bottom:2.2rem;max-width:36rem;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* Footer */
+footer{background:#07111D;color:#8a96aa;padding:60px 0 30px}
+.foot{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap}
+.foot-brand{max-width:20rem}
+.foot-brand .brand{margin-bottom:1.1rem}
+.foot-brand p{font-size:.9rem;line-height:1.7}
+.foot-c h5{color:var(--gold);font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:1rem;font-family:'Inter',sans-serif;font-weight:700}
+.foot-c a,.foot-c p{display:block;font-size:.9rem;margin-bottom:.5rem;transition:.15s}
+.foot-c a:hover{color:var(--gold-l)}
+.copy{margin-top:42px;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);font-size:.82rem;text-align:center;color:#4a5568}
+.oab-badge{display:inline-block;background:rgba(201,162,75,.12);color:var(--gold-l);font-size:.72rem;font-weight:700;letter-spacing:.1em;padding:.3rem .7rem;text-transform:uppercase;margin-top:.6rem}
+
+/* Responsive */
+@media(max-width:880px){
+  .hero-grid,.diff-grid{grid-template-columns:1fr}
+  .areas{grid-template-columns:1fr}
+  .nums-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .nav-links{display:none}
+  .hero-visual{display:none}
+}
+@media(max-width:520px){
+  .nums-grid{grid-template-columns:1fr 1fr}
+  .foot{flex-direction:column;gap:28px}
+}
+
+/* Placeholder images */
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.diff-img .ph-img{position:absolute}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">⚖️ PROJETO DEMONSTRATIVO — criado por mundoWS · seu site pode ser assim</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="1" width="2" height="5" rx="1" fill="#0E1B2E"/>
+          <circle cx="13" cy="3" r="1.5" fill="#0E1B2E"/>
+          <rect x="12" y="20" width="2" height="5" rx="1" fill="#0E1B2E"/>
+          <rect x="1" y="12" width="24" height="2" rx="1" fill="#0E1B2E"/>
+          <path d="M3 14c0 3.3 2.2 5 4.5 5S12 17.3 12 14H3z" fill="#0E1B2E" opacity=".85"/>
+          <path d="M14 14c0 3.3 2.2 5 4.5 5S23 17.3 23 14h-9z" fill="#0E1B2E" opacity=".85"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">MARTINS &amp; ASSOCIADOS</span>
+        <span class="brand-sub">Advocacia</span>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#areas">Áreas</a>
+      <a href="#diferenciais">O Escritório</a>
+      <a href="#contato">Contato</a>
+      <a href="#contato" class="btn btn-g">Agendar consulta</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kick">⚖️ Mais de 20 anos defendendo seus direitos</span>
+      <h1>Seu direito merece <em>defesa séria</em> e dedicada</h1>
+      <p>No Martins &amp; Associados, unimos experiência, ética e comprometimento para proteger o que é seu. Atuamos com rigor técnico e atendimento humanizado em todas as etapas do processo.</p>
+      <div class="hero-cta">
+        <a href="#contato" class="btn btn-g">Agendar consulta</a>
+        <a href="#areas" class="btn btn-o">Áreas de atuação</a>
+      </div>
+      <div class="hero-note">
+        <div>
+          <span>Conheça seu caso</span>
+          <strong>1ª consulta avaliativa gratuita</strong>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img class="ph-img" loading="lazy" alt="Advogado em escritório com livros jurídicos" src="https://loremflickr.com/700/875/lawyer,office,law?lock=81">
+      <div class="hero-badge">OAB — Regularidade garantida</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div>
+  <span>DIREITO TRABALHISTA</span>•<span>DIREITO CIVIL</span>•<span>DIREITO DE FAMÍLIA</span>•<span>DIREITO EMPRESARIAL</span>•<span>DIREITO PREVIDENCIÁRIO</span>•<span>DIREITO DO CONSUMIDOR</span>•<span>DIREITO TRABALHISTA</span>•<span>DIREITO CIVIL</span>•<span>DIREITO DE FAMÍLIA</span>•<span>DIREITO EMPRESARIAL</span>•<span>DIREITO PREVIDENCIÁRIO</span>•<span>DIREITO DO CONSUMIDOR</span>•
+</div></div>
+
+<section id="areas" class="areas-bg">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">O que fazemos</span>
+      <h2>Áreas de atuação</h2>
+      <p>Contamos com equipe especializada para atender com excelência cada área do direito, garantindo a melhor estratégia para o seu caso.</p>
+    </div>
+    <div class="areas">
+      <div class="area"><div class="n">01</div><h3>Direito Trabalhista</h3><p>Defesa de trabalhadores e empresas em ações de rescisão, horas extras, assédio e questões sindicais.</p></div>
+      <div class="area"><div class="n">02</div><h3>Direito Civil</h3><p>Contratos, responsabilidade civil, cobranças, indenizações e questões patrimoniais entre pessoas e empresas.</p></div>
+      <div class="area"><div class="n">03</div><h3>Direito de Família</h3><p>Divórcio, guarda, alimentos, inventário e planejamento sucessório com sensibilidade e celeridade.</p></div>
+      <div class="area"><div class="n">04</div><h3>Direito Empresarial</h3><p>Constituição de sociedades, contratos comerciais, recuperação judicial e proteção de ativos empresariais.</p></div>
+      <div class="area"><div class="n">05</div><h3>Direito Previdenciário</h3><p>Aposentadoria, benefícios por incapacidade, revisões do INSS e planejamento previdenciário.</p></div>
+      <div class="area"><div class="n">06</div><h3>Direito do Consumidor</h3><p>Defesa do consumidor em cobranças indevidas, produtos defeituosos e práticas abusivas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="numeros" class="nums">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">Nossos números</span>
+      <h2>Experiência que faz a diferença</h2>
+      <p>Décadas de atuação construindo resultados reais para nossos clientes.</p>
+    </div>
+    <div class="nums-grid">
+      <div class="num-item"><div class="big">+20</div><b>Anos de experiência</b><span>Tradição e credibilidade</span></div>
+      <div class="num-item"><div class="big">+1.500</div><b>Casos atendidos</b><span>Clientes defendidos</span></div>
+      <div class="num-item"><div class="big">OAB</div><b>Regularidade ativa</b><span>Inscrição em dia</span></div>
+      <div class="num-item"><div class="big">100%</div><b>Atendimento humanizado</b><span>Próximos de você</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="wrap">
+    <div class="diff-grid">
+      <div class="diff-img">
+        <img class="ph-img" loading="lazy" alt="Escritório de advocacia, mesa com documentos jurídicos" src="https://loremflickr.com/680/510/justice,law,courtroom?lock=85">
+      </div>
+      <div>
+        <div class="sh" style="margin-bottom:0">
+          <span class="ey">Por que nos escolher</span>
+          <h2>Um escritório comprometido com você</h2>
+          <p>Mais do que representação jurídica — oferecemos segurança, clareza e presença em cada etapa do seu caso.</p>
+        </div>
+        <ul class="diff-list">
+          <li>
+            <div class="diff-icon">⚖️</div>
+            <div class="diff-text"><strong>Atendimento personalizado</strong><span>Cada caso recebe atenção exclusiva de advogados experientes, sem terceirização.</span></div>
+          </li>
+          <li>
+            <div class="diff-icon">📋</div>
+            <div class="diff-text"><strong>Transparência total</strong><span>Você é informado de cada passo, prazo e decisão do seu processo, em linguagem clara.</span></div>
+          </li>
+          <li>
+            <div class="diff-icon">🏛️</div>
+            <div class="diff-text"><strong>Equipe especializada</strong><span>Advogados com formação específica em cada área, prontos para a melhor estratégia jurídica.</span></div>
+          </li>
+          <li>
+            <div class="diff-icon">🤝</div>
+            <div class="diff-text"><strong>Ética e sigilo profissional</strong><span>Seu caso tratado com absoluta confidencialidade e respeito às normas da OAB.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="cta">
+  <div class="wrap cta-inner">
+    <h2>Pronto para defender <em>seus direitos?</em></h2>
+    <p>Entre em contato agora e agende sua primeira consulta avaliativa. Atendemos presencialmente e por videochamada.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-g">Agendar consulta</a>
+      <a href="#" class="btn btn-o">Falar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <div class="brand">
+          <div class="brand-mark" style="background:var(--gold)">
+            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="1" width="2" height="5" rx="1" fill="#0E1B2E"/>
+              <rect x="12" y="20" width="2" height="5" rx="1" fill="#0E1B2E"/>
+              <rect x="1" y="12" width="24" height="2" rx="1" fill="#0E1B2E"/>
+              <path d="M3 14c0 3.3 2.2 5 4.5 5S12 17.3 12 14H3z" fill="#0E1B2E" opacity=".85"/>
+              <path d="M14 14c0 3.3 2.2 5 4.5 5S23 17.3 23 14h-9z" fill="#0E1B2E" opacity=".85"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">MARTINS &amp; ASSOCIADOS</span>
+            <span class="brand-sub">Advocacia</span>
+          </div>
+        </div>
+        <p>Escritório de advocacia com mais de 20 anos de experiência. Defendemos seus direitos com seriedade, ética e atendimento humanizado.</p>
+        <span class="oab-badge">OAB — Inscrição Ativa</span>
+      </div>
+      <div class="foot-c">
+        <h5>Contato</h5>
+        <p>📞 (00) 0 0000-0000</p>
+        <p>📧 contato@martinsassociados.adv.br</p>
+        <p>📍 Rua das Acácias, 142 — Centro</p>
+        <p>🕐 Seg–Sex, 9h às 18h</p>
+      </div>
+      <div class="foot-c">
+        <h5>Áreas de atuação</h5>
+        <a href="#areas">Direito Trabalhista</a>
+        <a href="#areas">Direito Civil</a>
+        <a href="#areas">Direito de Família</a>
+        <a href="#areas">Direito Empresarial</a>
+        <a href="#areas">Direito Previdenciário</a>
+        <a href="#areas">Direito do Consumidor</a>
+      </div>
+    </div>
+    <div class="copy">© Martins &amp; Associados Advocacia — site demonstrativo desenvolvido por mundoWS</div>
+  </div>
+</footer>
+
+<script>document.querySelectorAll('img.ph-img').forEach(i=>i.addEventListener('error',()=>i.style.display='none'));</script>
+<a href="#" id="wa-fab-demo" aria-label="Falar no WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:99;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg></a>
+</body>
+</html>
