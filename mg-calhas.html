@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#0A1426"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230A1426'/><path d='M5 16 16 7l11 9-2 2-9-7-9 7z' fill='%23C9D4E3'/><path d='M16 19c-1.6 1.8-2.6 3-2.6 4.2A2.6 2.6 0 0 0 16 26a2.6 2.6 0 0 0 2.6-2.8c0-1.2-1-2.4-2.6-4.2z' fill='%232E7DE0'/></svg>"/>
+<title>MG Calhas — Calhas, Rufos e Funilaria em São Leopoldo, RS</title>
+<meta name="description" content="MG Calhas: instalação e fabricação de calhas, rufos, pingadeiras, condutores e coberturas metálicas em São Leopoldo e região. Atendimento rápido e orçamento sem compromisso. (51) 98039-8963."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:title" content="MG Calhas — Calhas, Rufos e Funilaria em São Leopoldo, RS"/>
+<meta property="og:description" content="Atendimento rápido, orçamento sem compromisso e soluções sob medida para sua obra. Qualidade que protege, acabamento que valoriza."/>
+<meta property="og:image" content="https://loremflickr.com/1200/630/rain,gutter,roof?lock=27"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1426;--navy-2:#0F1E38;--navy-3:#16294A;
+  --blue:#2E7DE0;--blue-d:#1F66C4;--blue-dk:#0E1B33;
+  --silver-1:#EEF2F8;--silver-2:#C9D4E3;--silver-3:#9AA8BC;--silver-4:#6E7C92;
+  --bg:#F4F6FB;--white:#fff;--gray:#64748B;--line:#E2E8F2;--ink:#0F172A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.hf{font-family:'Archivo',sans-serif;font-weight:900;line-height:.97;letter-spacing:-.01em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* ── METALLIC LOGO ── */
+.metal{background:linear-gradient(170deg,#fff 0%,var(--silver-2) 38%,var(--silver-4) 62%,#fff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo{display:flex;align-items:center;gap:.6rem}
+.logo .mark{width:46px;height:46px;flex-shrink:0}
+.logo .lk{font-family:'Archivo',sans-serif;font-weight:900;line-height:.85}
+.logo .lk .top{font-size:1.5rem;letter-spacing:.02em}
+.logo .lk .top em{font-style:normal;color:var(--blue)}
+.logo .lk .sub{font-size:.62rem;font-weight:700;letter-spacing:.42em;color:var(--silver-3);text-transform:uppercase;margin-top:2px}
+
+/* ── HEADER ── */
+header{position:sticky;top:0;z-index:50;background:rgba(10,20,38,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:#CBD5E1;font-weight:600;font-size:.86rem;text-transform:uppercase;letter-spacing:.04em;transition:.16s}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:700;padding:.82rem 1.6rem;cursor:pointer;border:none;transition:.18s;text-transform:uppercase;letter-spacing:.04em;font-size:.84rem;border-radius:7px}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-d);transform:translateY(-2px);box-shadow:0 8px 22px rgba(46,125,224,.35)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1ebe5a;transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,211,102,.35)}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#fff}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-3);transform:translateY(-2px)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.menu-toggle span{display:block;width:26px;height:2.5px;background:#fff;border-radius:2px}
+
+/* ── HERO ── */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.34}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,20,38,.97) 0%,rgba(10,20,38,.85) 45%,rgba(14,27,51,.55) 100%)}
+.hero-inner{position:relative;z-index:1;padding:96px 0 88px}
+.kick{display:inline-flex;align-items:center;gap:.5rem;background:rgba(46,125,224,.16);color:#7FB2F5;font-weight:700;font-size:.78rem;padding:.5rem 1rem;border-radius:40px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:1.5rem;border:1px solid rgba(46,125,224,.34)}
+.hero h1{font-size:clamp(2.5rem,6vw,4.4rem);margin-bottom:1.2rem;max-width:15ch}
+.hero h1 .hl{color:var(--blue)}
+.hero p.lead{color:rgba(255,255,255,.8);font-size:1.14rem;max-width:40ch;margin-bottom:2.1rem;line-height:1.7}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.trust{display:flex;gap:1.8rem;flex-wrap:wrap}
+.trust .ti{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:.92rem;color:rgba(255,255,255,.9)}
+.trust .ti .c{width:26px;height:26px;border-radius:50%;background:var(--blue);display:grid;place-items:center;flex-shrink:0}
+.trust .ti .c svg{display:block}
+
+/* ── QUICK CONTACT BAR ── */
+.qbar{background:var(--blue);color:#fff}
+.qbar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18)}
+.qbar-grid a{background:var(--blue);display:flex;align-items:center;gap:.85rem;padding:20px 24px;transition:.16s}
+.qbar-grid a:hover{background:var(--blue-d)}
+.qbar-grid .ic{width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,.16);display:grid;place-items:center;flex-shrink:0}
+.qbar-grid b{display:block;font-size:1.02rem;font-weight:700;line-height:1.2}
+.qbar-grid span{display:block;font-size:.76rem;color:rgba(255,255,255,.78);text-transform:uppercase;letter-spacing:.06em}
+
+/* ── SECTIONS ── */
+section{padding:84px 0}
+.sh{margin-bottom:50px;max-width:46rem}
+.sh.center{margin-left:auto;margin-right:auto;text-align:center}
+.sh .ey{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+.sh h2{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.9rem,4.4vw,3rem);margin:.55rem 0;color:var(--ink);line-height:1.05}
+.sh p{color:var(--gray);font-size:1.04rem;line-height:1.7}
+
+/* ── SERVIÇOS ── */
+.servs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.serv{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.22s;position:relative;overflow:hidden}
+.serv::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--silver-2),var(--silver-4));transform:scaleX(0);transform-origin:left;transition:.25s}
+.serv:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,30,56,.12);border-color:transparent}
+.serv:hover::before{transform:scaleX(1);background:linear-gradient(90deg,var(--blue),#7FB2F5)}
+.serv .ico{width:54px;height:54px;border-radius:12px;background:var(--navy);display:grid;place-items:center;margin-bottom:1.1rem}
+.serv .ico svg{display:block}
+.serv h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.16rem;margin-bottom:.55rem;color:var(--ink);letter-spacing:.01em}
+.serv p{color:var(--gray);font-size:.94rem}
+.serv .tag{position:absolute;top:18px;right:18px;background:var(--blue);color:#fff;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.25rem .55rem;border-radius:30px}
+
+/* ── DESTAQUE / FAIXA ── */
+.marquee{background:var(--navy);color:#fff;padding:15px 0;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.marquee div{display:inline-block;font-family:'Archivo',sans-serif;font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;animation:scroll 28s linear infinite}
+.marquee span{margin:0 1rem;color:rgba(255,255,255,.5)}
+.marquee .sep{color:var(--blue);font-size:1.2rem;margin:0 .4rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── POR QUE ── */
+.why{background:var(--navy);color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-item{padding:30px 22px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.04);text-align:center;transition:.2s}
+.why-item:hover{background:rgba(46,125,224,.12);border-color:rgba(46,125,224,.4);transform:translateY(-5px)}
+.why-item .num{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.6rem;line-height:1}
+.why-item b{display:block;margin:.5rem 0 .35rem;text-transform:uppercase;letter-spacing:.04em;font-size:.94rem;color:#fff}
+.why-item p{color:#94A3B8;font-size:.86rem}
+
+/* ── PROCESSO ── */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{position:relative;padding-top:8px}
+.step .n{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.05rem;width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;margin-bottom:1rem}
+.step h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.08rem;margin-bottom:.5rem;color:var(--ink)}
+.step p{color:var(--gray);font-size:.92rem}
+
+/* ── GALERIA ── */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal a{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:var(--navy-3);display:block}
+.gal a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.4s}
+.gal a:hover img{transform:scale(1.07)}
+.gal a .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px;background:linear-gradient(to top,rgba(10,20,38,.92),transparent);color:#fff;font-weight:700;font-size:.92rem}
+.gal a::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,20,38,.25),transparent 55%)}
+
+/* ── SOBRE / CIDADE ── */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.about-img{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:5/4;background:var(--navy-3)}
+.about-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-img .pill{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(46,125,224,.95);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:.82rem;padding:.55rem .95rem;border-radius:8px;text-transform:uppercase;letter-spacing:.03em}
+.about h2{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--ink);margin:.5rem 0 1rem;line-height:1.08}
+.about p{color:var(--gray);margin-bottom:1rem}
+.about .check-list{list-style:none;display:grid;gap:.7rem;margin-top:1.3rem}
+.about .check-list li{display:flex;align-items:flex-start;gap:.7rem;font-weight:500;color:var(--ink)}
+.about .check-list li .c{width:22px;height:22px;border-radius:50%;background:var(--blue);display:grid;place-items:center;flex-shrink:0;margin-top:3px}
+
+/* ── FAQ ── */
+.faq{max-width:780px;margin:0 auto}
+.q{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden;background:#fff;transition:.2s}
+.q[open]{border-color:var(--blue);box-shadow:0 8px 24px rgba(46,125,224,.1)}
+.q summary{cursor:pointer;list-style:none;padding:20px 24px;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.02rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.q summary::-webkit-details-marker{display:none}
+.q summary .pm{width:26px;height:26px;flex-shrink:0;border-radius:50%;background:var(--bg);display:grid;place-items:center;color:var(--blue);font-weight:900;font-size:1.2rem;transition:.2s}
+.q[open] summary .pm{background:var(--blue);color:#fff;transform:rotate(45deg)}
+.q .a{padding:0 24px 22px;color:var(--gray);line-height:1.7}
+
+/* ── CTA / CONTATO ── */
+.contact{background:var(--navy);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.contact h2{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.06;margin-bottom:1rem}
+.contact .lead{color:#94A3B8;margin-bottom:2rem;font-size:1.04rem}
+.cinfo{display:grid;gap:14px}
+.cinfo a,.cinfo div{display:flex;align-items:center;gap:1rem;padding:16px 18px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.04);transition:.18s}
+.cinfo a:hover{background:rgba(46,125,224,.14);border-color:rgba(46,125,224,.4);transform:translateX(4px)}
+.cinfo .ic{width:42px;height:42px;border-radius:10px;background:var(--blue);display:grid;place-items:center;flex-shrink:0}
+.cinfo .ic.wa{background:#25D366}
+.cinfo .ic.ig{background:radial-gradient(circle at 30% 110%,#fdf497,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.cinfo b{display:block;font-size:1.02rem;font-weight:700}
+.cinfo span{display:block;font-size:.78rem;color:#94A3B8;text-transform:uppercase;letter-spacing:.05em}
+.map-box{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.12);height:100%;min-height:420px}
+.map-box iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.2) contrast(1.05)}
+
+/* ── FOOTER ── */
+footer{background:#070E1C;color:#64748B;padding:54px 0 26px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.07)}
+.foot p{font-size:.92rem;margin-top:.9rem;max-width:34ch}
+.foot h5{color:var(--silver-2);font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:1rem;font-weight:700}
+.foot a{display:block;color:#94A3B8;font-size:.92rem;margin-bottom:.55rem;transition:.16s}
+.foot a:hover{color:#fff}
+.copy{padding-top:24px;text-align:center;font-size:.82rem;color:#475569}
+.copy span{color:var(--blue)}
+
+/* ── WHATSAPP FAB ── */
+#wa-fab{position:fixed;right:18px;bottom:18px;z-index:99;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 28px rgba(37,211,102,.45);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:.6s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--navy);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%;padding:14px 24px}
+  .nav-links .btn{margin:8px 24px;justify-content:center}
+  .menu-toggle{display:flex}
+  .servs,.why-grid,.steps,.gal{grid-template-columns:repeat(2,1fr)}
+  .qbar-grid{grid-template-columns:1fr}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
+  .foot{grid-template-columns:1fr 1fr}
+  .map-box{min-height:300px}
+}
+@media(max-width:560px){
+  .servs,.why-grid,.steps,.gal,.foot{grid-template-columns:1fr}
+  .hero-inner{padding:64px 0 56px}
+  section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="logo" aria-label="MG Calhas">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="mg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff"/><stop offset=".4" stop-color="#C9D4E3"/>
+            <stop offset=".7" stop-color="#6E7C92"/><stop offset="1" stop-color="#fff"/>
+          </linearGradient>
+        </defs>
+        <rect width="48" height="48" rx="10" fill="#0A1426"/>
+        <path d="M8 23 24 11l16 12-2.4 2.4L24 16 10.4 25.4z" fill="url(#mg)"/>
+        <text x="24" y="33" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="13" fill="url(#mg)">MG</text>
+        <path d="M37 27c-1.3 1.5-2.1 2.5-2.1 3.5a2.1 2.1 0 1 0 4.2 0c0-1-.8-2-2.1-3.5z" fill="#2E7DE0"/>
+      </svg>
+      <span class="lk">
+        <span class="top metal">MG<em>.</em></span>
+        <span class="sub">Calhas</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#galeria">Exemplos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="https://wa.me/5551980398963" class="btn btn-wa" target="_blank" rel="noopener">Orçamento grátis</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="topo">
+  <div class="hero-bg"><img class="ph-img" alt="" loading="eager" src="https://loremflickr.com/1600/900/roof,house,modern?lock=12"></div>
+  <div class="wrap hero-inner">
+    <span class="kick">★ São Leopoldo e região — RS</span>
+    <h1 class="hf">Atendimento rápido e <span class="hl">soluções sob medida</span> para a sua obra.</h1>
+    <p class="lead">Calhas, rufos, pingadeiras, condutores e coberturas metálicas com instalação profissional. Orçamento sem compromisso e acabamento impecável do começo ao fim.</p>
+    <div class="hero-cta">
+      <a href="https://wa.me/5551980398963?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20calhas." class="btn btn-wa" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="tel:+5551980398963" class="btn btn-ghost">(51) 98039-8963</a>
+    </div>
+    <div class="trust">
+      <div class="ti"><span class="c"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Qualidade</div>
+      <div class="ti"><span class="c"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Durabilidade</div>
+      <div class="ti"><span class="c"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Acabamento impecável</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BARRA DE CONTATO RÁPIDO ── -->
+<div class="qbar">
+  <div class="wrap" style="padding:0">
+    <div class="qbar-grid">
+      <a href="tel:+5551980398963">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg></span>
+        <span><b>(51) 98039-8963</b><span>Ligue agora</span></span>
+      </a>
+      <a href="mailto:Marciofunilaria@hotmail.com">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7L4 7v1l8 5 8-5V7l-8 5Z"/></svg></span>
+        <span><b>E-mail</b><span>Marciofunilaria@hotmail.com</span></span>
+      </a>
+      <a href="#contato">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2c-3.9 0-7 3.1-7 7 0 5 7 13 7 13s7-8 7-13c0-3.9-3.1-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+        <span><b>São Leopoldo, RS</b><span>Atendemos a região</span></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVIÇOS ── -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="sh">
+      <span class="ey">O que fazemos</span>
+      <h2>Serviços mais solicitados</h2>
+      <p>Da fabricação à instalação, cuidamos de todo o sistema que protege sua casa, comércio ou obra da água da chuva — com chapas de qualidade e acabamento sob medida.</p>
+    </div>
+    <div class="servs">
+      <div class="serv reveal"><span class="tag">Mais pedido</span>
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M2 9h20l-2 3H4L2 9Z" fill="#2E7DE0"/><path d="M4 12h16v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6Z" fill="#C9D4E3"/></svg></div>
+        <h3>Instalação de Calhas</h3>
+        <p>Calhas galvanizadas, de alumínio e em chapa, fabricadas na medida certa do seu telhado para escoar a água com eficiência.</p>
+      </div>
+      <div class="serv reveal"><span class="tag">Mais pedido</span>
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 18 12 5l9 13H3Z" fill="#C9D4E3"/><path d="M12 5l9 13h-4L9 9l3-4Z" fill="#2E7DE0"/></svg></div>
+        <h3>Rufos e Contra-rufos</h3>
+        <p>Vedação metálica nas junções de telhado e parede para impedir infiltrações e proteger o acabamento da obra.</p>
+      </div>
+      <div class="serv reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="14" rx="2" fill="#C9D4E3"/><path d="M12 17c-1.5 1.7-2.4 2.8-2.4 3.9A2.4 2.4 0 0 0 12 23a2.4 2.4 0 0 0 2.4-2.1c0-1.1-.9-2.2-2.4-3.9Z" fill="#2E7DE0"/></svg></div>
+        <h3>Condutores e Tubos de Queda</h3>
+        <p>Descidas de água (condutores verticais) dimensionadas para levar o volume da chuva até o solo sem transbordar.</p>
+      </div>
+      <div class="serv reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 14h16v3H4z" fill="#C9D4E3"/><path d="M6 10h12l2 4H4l2-4Z" fill="#2E7DE0"/></svg></div>
+        <h3>Pingadeiras e Algerozes</h3>
+        <p>Peças de acabamento em chapa que afastam a água de muros, janelas e platibandas, evitando manchas e infiltração.</p>
+      </div>
+      <div class="serv reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M2 12 12 4l10 8-2 1.5L12 7 4 13.5 2 12Z" fill="#C9D4E3"/><path d="M5 14h14v6H5z" fill="#2E7DE0"/></svg></div>
+        <h3>Coberturas Metálicas</h3>
+        <p>Telhados e coberturas em telha metálica para garagens, varandas, áreas de serviço, galpões e ampliações.</p>
+      </div>
+      <div class="serv reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 8 10 8 10s8-5 8-10V6l-8-4Z" fill="#C9D4E3"/><path d="M9 12l2 2 4-4" stroke="#2E7DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Funilaria de Telhado</h3>
+        <p>Acabamentos metálicos sob medida, peças especiais e detalhes que dão o toque final e protegem o telhado.</p>
+      </div>
+      <div class="serv reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M14 3l3 3-9 9-3 1 1-3 8-10Z" fill="#C9D4E3"/><path d="M4 19h16v2H4z" fill="#2E7DE0"/></svg></div>
+        <h3>Manutenção e Limpeza</h3>
+        <p>Revisão, limpeza e reparo de calhas entupidas ou danificadas para evitar vazamentos e prolongar a vida útil.</p>
+      </div>
+      <div class="serv reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" fill="#C9D4E3"/><path d="M3 9h18M8 4v14" stroke="#2E7DE0" stroke-width="1.6"/></svg></div>
+        <h3>Calhas Industriais</h3>
+        <p>Sistemas de captação para galpões, indústrias e grandes coberturas, com projeto adequado ao volume de água.</p>
+      </div>
+      <div class="serv reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 13h16v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4Z" fill="#C9D4E3"/><path d="M7 13c0-3 2-5 5-5s5 2 5 5" stroke="#2E7DE0" stroke-width="2" fill="none"/></svg></div>
+        <h3>Impermeabilização</h3>
+        <p>Vedação e impermeabilização de calhas, lajes e pontos críticos para acabar de vez com a infiltração.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAIXA ── -->
+<div class="marquee" aria-hidden="true">
+  <div>
+    Qualidade que protege <span class="sep">◆</span> Acabamento que valoriza <span class="sep">◆</span> Orçamento sem compromisso <span class="sep">◆</span> Soluções sob medida <span class="sep">◆</span>
+    Qualidade que protege <span class="sep">◆</span> Acabamento que valoriza <span class="sep">◆</span> Orçamento sem compromisso <span class="sep">◆</span> Soluções sob medida <span class="sep">◆</span>
+  </div>
+</div>
+
+<!-- ── POR QUE MG ── -->
+<section class="why">
+  <div class="wrap">
+    <div class="sh center" style="color:#fff">
+      <span class="ey">Por que a MG Calhas</span>
+      <h2 style="color:#fff">Confiança do início ao acabamento</h2>
+      <p style="color:#94A3B8">Trabalho feito por quem entende de chapa e telhado, com material de qualidade e atenção a cada detalhe.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="num metal">+10</div><b>Anos de experiência</b><p>Atuação consolidada em São Leopoldo e região.</p></div>
+      <div class="why-item reveal"><div class="num metal">100%</div><b>Sob medida</b><p>Cada peça fabricada para o seu telhado.</p></div>
+      <div class="why-item reveal"><div class="num metal">24h</div><b>Resposta rápida</b><p>Orçamento ágil e sem compromisso.</p></div>
+      <div class="why-item reveal"><div class="num metal">★★★★★</div><b>Clientes satisfeitos</b><p>Acabamento impecável e serviço garantido.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESSO ── -->
+<section id="processo">
+  <div class="wrap">
+    <div class="sh center">
+      <span class="ey">Como funciona</span>
+      <h2>Simples do orçamento à entrega</h2>
+      <p>Um processo direto, transparente e sem enrolação para você proteger o que é seu.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Você chama</h3><p>Fale com a gente pelo WhatsApp ou telefone e conte o que precisa.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>Visita e medição</h3><p>Vamos até o local, avaliamos a obra e tiramos as medidas certas.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>Orçamento sem compromisso</h3><p>Você recebe o valor e o prazo de forma clara, sem surpresas.</p></div>
+      <div class="step reveal"><div class="n">4</div><h3>Fabricação e instalação</h3><p>Fabricamos sob medida e instalamos com acabamento impecável.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALERIA / EXEMPLOS ── -->
+<section id="galeria" class="about" style="background:#fff">
+  <div class="wrap">
+    <div class="sh center">
+      <span class="ey">Exemplos de trabalhos</span>
+      <h2>Alguns dos nossos serviços</h2>
+      <p>Imagens ilustrativas de calhas, rufos, coberturas e acabamentos como os que executamos no dia a dia.</p>
+    </div>
+    <div class="gal">
+      <a href="#contato"><img class="ph-img" loading="lazy" alt="Calha instalada em telhado residencial" src="https://loremflickr.com/600/450/gutter,roof?lock=21"><span class="cap">Calha residencial</span></a>
+      <a href="#contato"><img class="ph-img" loading="lazy" alt="Condutor de água da chuva na parede" src="https://loremflickr.com/600/450/downspout,rain?lock=33"><span class="cap">Condutor de água</span></a>
+      <a href="#contato"><img class="ph-img" loading="lazy" alt="Cobertura metálica" src="https://loremflickr.com/600/450/metal,roof?lock=44"><span class="cap">Cobertura metálica</span></a>
+      <a href="#contato"><img class="ph-img" loading="lazy" alt="Rufo de telhado" src="https://loremflickr.com/600/450/roof,flashing,metal?lock=51"><span class="cap">Rufos e vedação</span></a>
+      <a href="#contato"><img class="ph-img" loading="lazy" alt="Calha de galpão industrial" src="https://loremflickr.com/600/450/warehouse,roof?lock=62"><span class="cap">Calha industrial</span></a>
+      <a href="#contato"><img class="ph-img" loading="lazy" alt="Chuva escoando pela calha" src="https://loremflickr.com/600/450/rain,gutter,water?lock=73"><span class="cap">Escoamento eficiente</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOBRE / CIDADE ── -->
+<section id="sobre" class="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img class="ph-img" loading="lazy" alt="Profissional da MG Calhas trabalhando em telhado" src="https://loremflickr.com/700/560/roofer,worker,roof?lock=84">
+      <span class="pill">📍 São Leopoldo · RS</span>
+    </div>
+    <div class="reveal">
+      <span class="ey" style="color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem">Sobre a MG Calhas</span>
+      <h2>Especialistas em proteger a sua obra</h2>
+      <p>A <strong>MG Calhas</strong> é uma empresa de São Leopoldo, no Rio Grande do Sul, especializada em calhas, rufos, coberturas e funilaria de telhado. Atendemos residências, comércios, obras e indústrias da cidade e de toda a região do Vale do Sinos.</p>
+      <p>Nosso compromisso é simples: <strong>qualidade que protege e acabamento que valoriza</strong>. Cada peça é fabricada sob medida, com material de boa procedência e instalação feita por quem entende do assunto.</p>
+      <ul class="check-list">
+        <li><span class="c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Atendimento em São Leopoldo e região do Vale do Sinos</li>
+        <li><span class="c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Peças fabricadas sob medida para cada telhado</li>
+        <li><span class="c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Orçamento rápido e sem compromisso</li>
+        <li><span class="c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Material de qualidade e acabamento impecável</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sh center">
+      <span class="ey">Tire suas dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+      <p>As respostas para o que os clientes mais perguntam antes de fechar o serviço.</p>
+    </div>
+    <div class="faq">
+      <details class="q"><summary>O orçamento é gratuito? <span class="pm">+</span></summary><div class="a">Sim. Fazemos a visita, a medição e o orçamento sem nenhum compromisso. Você só decide depois de saber o valor e o prazo.</div></details>
+      <details class="q"><summary>Quais regiões vocês atendem? <span class="pm">+</span></summary><div class="a">Atendemos São Leopoldo e toda a região do Vale do Sinos, no Rio Grande do Sul. Fale com a gente pelo WhatsApp para confirmar a sua cidade.</div></details>
+      <details class="q"><summary>Vocês fabricam as calhas sob medida? <span class="pm">+</span></summary><div class="a">Sim. Cada calha, rufo e pingadeira é fabricada na medida exata do seu telhado, garantindo o encaixe e o escoamento corretos.</div></details>
+      <details class="q"><summary>Qual material é usado nas calhas? <span class="pm">+</span></summary><div class="a">Trabalhamos com chapas galvanizadas e de alumínio de boa procedência, escolhidas conforme o tipo de obra e a sua necessidade. Indicamos a melhor opção no orçamento.</div></details>
+      <details class="q"><summary>Vocês fazem manutenção de calhas existentes? <span class="pm">+</span></summary><div class="a">Fazemos sim. Limpeza, reparo de vazamentos, troca de trechos danificados e revisão geral para evitar entupimentos e infiltração.</div></details>
+      <details class="q"><summary>Como faço para solicitar? <span class="pm">+</span></summary><div class="a">É só chamar no WhatsApp (51) 98039-8963, ligar no mesmo número ou mandar um e-mail. Respondemos rápido e agendamos a visita.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTATO ── -->
+<section id="contato" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="ey" style="color:#7FB2F5;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem">Fale com a gente</span>
+      <h2 class="hf" style="margin-top:.5rem">Peça seu orçamento<br>sem compromisso</h2>
+      <p class="lead">Conte o que você precisa e proteja o que é seu. Atendimento rápido em São Leopoldo, RS.</p>
+      <div class="cinfo">
+        <a href="https://wa.me/5551980398963?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20calhas." target="_blank" rel="noopener">
+          <span class="ic wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg></span>
+          <span><b>(51) 98039-8963</b><span>WhatsApp · toque para conversar</span></span>
+        </a>
+        <a href="tel:+5551980398963">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg></span>
+          <span><b>(51) 98039-8963</b><span>Telefone · ligue agora</span></span>
+        </a>
+        <a href="mailto:Marciofunilaria@hotmail.com">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7L4 7v1l8 5 8-5V7l-8 5Z"/></svg></span>
+          <span><b>Marciofunilaria@hotmail.com</b><span>E-mail · envie sua dúvida</span></span>
+        </a>
+        <a href="https://instagram.com/marciogiacobe" target="_blank" rel="noopener">
+          <span class="ic ig"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4Zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3Zm6.8-11.2a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5Z"/></svg></span>
+          <span><b>@marciogiacobe</b><span>Instagram · veja nossos trabalhos</span></span>
+        </a>
+        <div>
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2c-3.9 0-7 3.1-7 7 0 5 7 13 7 13s7-8 7-13c0-3.9-3.1-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+          <span><b>São Leopoldo, RS</b><span>Atendemos a cidade e o Vale do Sinos</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="map-box reveal">
+      <iframe title="Mapa de São Leopoldo, RS" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=S%C3%A3o%20Leopoldo,%20RS&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#topo" class="logo" aria-label="MG Calhas">
+          <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect width="48" height="48" rx="10" fill="#0F1E38"/>
+            <path d="M8 23 24 11l16 12-2.4 2.4L24 16 10.4 25.4z" fill="#C9D4E3"/>
+            <text x="24" y="33" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="13" fill="#C9D4E3">MG</text>
+            <path d="M37 27c-1.3 1.5-2.1 2.5-2.1 3.5a2.1 2.1 0 1 0 4.2 0c0-1-.8-2-2.1-3.5z" fill="#2E7DE0"/>
+          </svg>
+          <span class="lk"><span class="top metal">MG<em style="font-style:normal;color:var(--blue)">.</em></span><span class="sub">Calhas</span></span>
+        </a>
+        <p>Calhas, rufos, coberturas e funilaria de telhado em São Leopoldo e região. Qualidade que protege, acabamento que valoriza.</p>
+      </div>
+      <div>
+        <h5>Serviços</h5>
+        <a href="#servicos">Instalação de calhas</a>
+        <a href="#servicos">Rufos e contra-rufos</a>
+        <a href="#servicos">Condutores e tubos de queda</a>
+        <a href="#servicos">Coberturas metálicas</a>
+        <a href="#servicos">Manutenção e limpeza</a>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <a href="tel:+5551980398963">📞 (51) 98039-8963</a>
+        <a href="https://wa.me/5551980398963" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="mailto:Marciofunilaria@hotmail.com">✉️ Marciofunilaria@hotmail.com</a>
+        <a href="https://instagram.com/marciogiacobe" target="_blank" rel="noopener">📷 @marciogiacobe</a>
+        <a href="#contato">📍 São Leopoldo, RS</a>
+      </div>
+    </div>
+    <div class="copy">© <span>MG Calhas</span> — São Leopoldo, RS. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5551980398963?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20calhas." id="wa-fab" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.7-.1 1.4Z"/></svg>
+</a>
+
+<script>
+// menu mobile
+var mt=document.getElementById('menuToggle'),nl=document.getElementById('navlinks');
+mt.addEventListener('click',function(){nl.classList.toggle('open')});
+nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open')})});
+// reveal on scroll
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+// esconde imagens que falharem ao carregar
+document.querySelectorAll('img.ph-img').forEach(function(i){i.addEventListener('error',function(){i.style.opacity='0'})});
+</script>
+</body>
+</html>
